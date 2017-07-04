@@ -10,14 +10,14 @@ public class Dijkstra {
 
     // Dijkstra's algorithm to find shortest path from s to all other nodes
     public static int[] dijkstra(WeightedGraph G, int s) {
-        final int[] dist = new int[G.size()];  // shortest known distance from "s"
+        final Double[] dist = new Double[G.size()];  // shortest known distance from "s"
         final int[] pred = new int[G.size()];  // preceeding node in path
         final boolean[] visited = new boolean[G.size()]; // all false initially
 
         for (int i = 0; i < dist.length; i++) {
-            dist[i] = Integer.MAX_VALUE;
+            dist[i] = Double.MAX_VALUE;
         }
-        dist[s] = 0;
+        dist[s] = 0.0;
 
         for (int i = 0; i < dist.length; i++) {
 
@@ -32,7 +32,7 @@ public class Dijkstra {
 //            System.out.println("n: " + Arrays.toString(n));
 
             for (final int v : n) {
-                final int d = dist[next] + G.getWeight(next, v);
+                final Double d = dist[next] + G.getWeight(next, v);
                 System.out.println("d: " + d);
                 /*
                 * d: 通过中间点（next），此待选邻居点到起点的距离
@@ -55,8 +55,8 @@ public class Dijkstra {
     /*
     *在所有没有访问过的邻居点中找到最小距离的那个点。
     * */
-    private static int minVertex(int[] dist, boolean[] v) {
-        int x = Integer.MAX_VALUE;
+    private static int minVertex(Double[] dist, boolean[] v) {
+        Double x = Double.MAX_VALUE;
         int y = -1;   // graph not connected, or no unvisited vertices
         for (int i = 0; i < dist.length; i++) {
             if (!v[i] && dist[i] < x) {
