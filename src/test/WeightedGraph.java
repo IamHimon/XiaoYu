@@ -55,7 +55,7 @@ public class WeightedGraph {
     * 当定义int[n][m]初始值为0
     * edges类型定义为double[n][m]时初始值为null，所以要逐一初始化。
     * */
-    public static void myFill(Object[][] a, Object val) {
+    private static void myFill(Object[][] a, Object val) {
         for (int i = 0, len = a.length; i < len; i++){
             for (int j = 0; j<a[i].length;j++){
                 a[i][j] = val;
@@ -105,30 +105,26 @@ public class WeightedGraph {
         }
     }
 
-    public Double distanceBetweenTwoPoints(Point p1, Point p2){
-        double _x = Math.abs(p1.getPoint()[0] - p2.getPoint()[0]);
-        double _y = Math.abs(p1.getPoint()[1] - p2.getPoint()[1]);
-        return Math.sqrt(_x*_x + _y*_y);
-    }
 
-    public WeightedGraph buildGraph(ArrayList<Point[]> allPointsPair, Map<String, Integer> point_id_map){
-        WeightedGraph t = new WeightedGraph(point_id_map.size());
 
-        for (Object obj:point_id_map.keySet()){
-            t.setLabel(point_id_map.get(obj), obj);
-        }
-
-        for (int i = 0; i<allPointsPair.size();i++){
-            int source = point_id_map.get(allPointsPair.get(i)[0].getLabel());
-            int target = point_id_map.get(allPointsPair.get(i)[1].getLabel());
-            Double weight = distanceBetweenTwoPoints(allPointsPair.get(i)[0], allPointsPair.get(i)[1]);
-
-            t.addEdge(source, target, weight);
-
-        }
-        t.print();
-        return t;
-    }
+//    public WeightedGraph buildGraph(ArrayList<Point[]> allPointsPair, Map<String, Integer> point_id_map){
+//        WeightedGraph t = new WeightedGraph(point_id_map.size());
+//
+//        for (Object obj:point_id_map.keySet()){
+//            t.setLabel(point_id_map.get(obj), obj);
+//        }
+//
+//        for (int i = 0; i<allPointsPair.size();i++){
+//            int source = point_id_map.get(allPointsPair.get(i)[0].getLabel());
+//            int target = point_id_map.get(allPointsPair.get(i)[1].getLabel());
+//            Double weight = distanceBetweenTwoPoints(allPointsPair.get(i)[0], allPointsPair.get(i)[1]);
+//
+//            t.addEdge(source, target, weight);
+//
+//        }
+//        t.print();
+//        return t;
+//    }
 
 
 
@@ -150,19 +146,13 @@ public class WeightedGraph {
         t.addEdge(4, 2, 7.0);
         t.addEdge(5, 3, 9.0);
         t.addEdge(5, 4, 3.0);
-//        for(Double[] obj:t.edges){
-//            for (Double o:obj){
-////                if (o != null)
-////                    System.out.println(o);
-//                System.out.println(o);
-//            }
-//        }
+
         t.print();
-//
-        final int[] pred = Dijkstra.dijkstra(t, 0);
-        for (int n = 0; n < 6; n++) {
-            Dijkstra.printPath(t, pred, 0, n);
-        }
+
+//        final int[] pred = Dijkstra.dijkstra(t, 0);
+//        for (int n = 0; n < 6; n++) {
+//            Dijkstra.printPath(t, pred, 0, n);
+//        }
     }
 
 }

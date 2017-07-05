@@ -42,14 +42,6 @@ public class Point {
         System.out.println(this.getLabel() + ": [" + this.getPoint()[0] + "," + this.getPoint()[1] + "]");
     }
 
-    public boolean isEqual(Point p1, Point p2){
-        return (p1.getLabel().equals(p2.getLabel())) && (p1.getPoint()[0].equals(p2.getPoint()[0]))
-                && (p1.getPoint()[1].equals(p2.getPoint()[1]));
-    }
-
-
-
-
     public static void main(String[] args) {
 
     }
