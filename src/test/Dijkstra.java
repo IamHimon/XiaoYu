@@ -1,5 +1,6 @@
 package test;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 /**
@@ -20,7 +21,6 @@ public class Dijkstra {
         dist[s] = 0.0;
 
         for (int i = 0; i < dist.length; i++) {
-
             final int next = minVertex(dist, visited);
 //            System.out.println("next: " + next);
             visited[next] = true;
@@ -33,7 +33,7 @@ public class Dijkstra {
 
             for (final int v : n) {
                 final Double d = dist[next] + G.getWeight(next, v);
-                System.out.println("d: " + d);
+//                System.out.println("d: " + d);
                 /*
                 * d: 通过中间点（next），此待选邻居点到起点的距离
                 * dist[v]：不通过中间点（next），此待选邻居点到起点的距离
@@ -56,9 +56,15 @@ public class Dijkstra {
     *在所有没有访问过的邻居点中找到最小距离的那个点。
     * */
     private static int minVertex(Double[] dist, boolean[] v) {
+//        System.out.println("in minVertex:");
+//        System.out.println(Arrays.toString(dist));
+//        System.out.println(Arrays.toString(v));
         Double x = Double.MAX_VALUE;
         int y = -1;   // graph not connected, or no unvisited vertices
         for (int i = 0; i < dist.length; i++) {
+//            System.out.println(v[i]);
+//            System.out.println(dist[i]);
+//            System.out.println("---------");
             if (!v[i] && dist[i] < x) {
                 y = i;
                 x = dist[i];
@@ -69,12 +75,18 @@ public class Dijkstra {
 
     public static void printPath(WeightedGraph G, int[] pred, int s, int e) {
         final java.util.ArrayList path = new java.util.ArrayList();
+        final ArrayList<Integer> pathID = new ArrayList();
         int x = e;
         while (x != s) {
             path.add(0, G.getLabel(x));
+            pathID.add(0, x);
             x = pred[x];
         }
         path.add(0, G.getLabel(s));
+        pathID.add(0, s);
         System.out.println(path);
+//        System.out.println(pathID);
+        System.out.println(G.pathDistance(pathID));
+
     }
 }
