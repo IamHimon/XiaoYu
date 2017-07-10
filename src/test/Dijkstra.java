@@ -1,7 +1,9 @@
 package test;
 
+import org.javatuples.Quartet;
+
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.HashMap;
 
 /**
  * Created by student on 2017/7/4.
@@ -87,6 +89,22 @@ public class Dijkstra {
         System.out.println(path);
 //        System.out.println(pathID);
         System.out.println(G.pathDistance(pathID));
+    }
 
+    public static Quartet getResultTuple(WeightedGraph G, HashMap<String, Integer> point_id_map,int[] pred, String start, String end){
+        int s = point_id_map.get(start);
+        int e = point_id_map.get(end);
+        final ArrayList path = new ArrayList();
+        final ArrayList<Integer> pathID = new ArrayList();
+        int x = e;
+        while (x != s) {
+            path.add(0, G.getLabel(x));
+            pathID.add(0, x);
+            x = pred[x];
+        }
+        path.add(0, G.getLabel(s));
+        pathID.add(0, s);
+
+        return Quartet.with(start,end,path,G.pathDistance(pathID));
     }
 }

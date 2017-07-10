@@ -87,9 +87,10 @@ public class Utils {
             }
         }
         // 读取完毕，构造WeightedGraph
-        print4J(point_id_map);
+//        print4J(point_id_map);
 
         //构造stairs，lifts，escalators
+        ArrayList<String> common_points = new ArrayList<>();
         ArrayList<String> stairs = new ArrayList<>();
         ArrayList<String> lifts = new ArrayList<>();
         ArrayList<String> escalators = new ArrayList<>();
@@ -100,6 +101,8 @@ public class Utils {
                 lifts.add(obj);
             else if (obj.startsWith("E"))
                 escalators.add(obj);
+            else if (obj.startsWith(""))
+                common_points.add(obj);
         }
 
 //        System.out.println(stairs.toString());
@@ -122,7 +125,7 @@ public class Utils {
             t.addEdge(target, source, weight);
         }
 
-        return new Floor(floor_name, t,stairs,lifts,escalators, point_id_map);
+        return new Floor(floor_name, t,common_points, stairs,lifts,escalators, point_id_map);
     }
 
     /*
@@ -320,21 +323,71 @@ public class Utils {
     }
 
     /*每层返回一个元祖(String start,String end,ArrayList path, Double distance)*/
-    public static ArrayList<Quartet<String, String, ArrayList<Object>,Double>> getResultWithinFloor(Floor floor, String start_point_name){
-        Quartet<String, String, ArrayList<Object>,Double> q ;
-
-        WeightedGraph t = floor.getGraph();
-        if (t.isConnected()){
-            final int[] pred = Dijkstra.dijkstra(t, floor.getPoint_id_map().get(start_point_name));
-            System.out.println(Arrays.toString(pred));
-            for (int n = 0; n < t.vexs; n++) {
-                Dijkstra.printPath(t, pred, 0, n);
+    public static ArrayList<Quartet<String, String, ArrayList<Object>,Double>> getResultWithinFloor(Floor floor){
+        ArrayList<Quartet<String, String, ArrayList<Object>,Double>> result = new ArrayList<>();
+        WeightedGraph graph = floor.getGraph();
+        HashMap<String, Integer> point_id_map = floor.getPoint_id_map();
+        for (String common_point:floor.getCommon_points()){
+            Integer start_point_id = point_id_map.get(common_point);
+            final int[] pred = Dijkstra.dijkstra(graph, start_point_id);
+            //stairs
+            for (String stair:floor.getStairs()){
+                Quartet Q = Dijkstra.getResultTuple(graph, point_id_map, pred, common_point, stair);
+                result.add(Q);
             }
-        }else {
-            System.out.println(" The graph is not connected!");
+            //lifts
+            for (String lift:floor.getLifts()){
+                Quartet Q = Dijkstra.getResultTuple(graph, point_id_map, pred, common_point, lift);
+                result.add(Q);
+            }
+            //escalator
+            for (String escalator:floor.getEscalators()){
+                Quartet Q = Dijkstra.getResultTuple(graph, point_id_map,pred, common_point, escalator);
+                result.add(Q);
+            }
         }
-
+        return result;
     }
+
+    public static ArrayList<Quartet<String, String, ArrayList<Object>,Double>> getResultWithinFloor(Floor floor, String start_point_name){
+        ArrayList<Quartet<String, String, ArrayList<Object>,Double>> result = new ArrayList<>();
+        WeightedGraph graph = floor.getGraph();
+        HashMap<String, Integer> point_id_map = floor.getPoint_id_map();
+        Integer start_point_id = point_id_map.get(start_point_name);
+        System.out.println(start_point_id);
+        final int[] pred = Dijkstra.dijkstra(graph, start_point_id);
+        //stairs
+        for (String stair:floor.getStairs()){
+            Quartet Q = Dijkstra.getResultTuple(graph, point_id_map, pred, start_point_name, stair);
+            result.add(Q);
+        }
+        //lifts
+        for (String lift:floor.getLifts()){
+            Quartet Q = Dijkstra.getResultTuple(graph, point_id_map, pred, start_point_name, lift);
+            result.add(Q);
+        }
+        //escalator
+        for (String escalator:floor.getEscalators()){
+            Quartet Q = Dijkstra.getResultTuple(graph, point_id_map,pred, start_point_name, escalator);
+            result.add(Q);
+        }
+        return result;
+    }
+
+    public static ArrayList<Quartet<String, String, ArrayList<Object>,Double>> getResultWithinFloor(Floor floor, String start_point, String end_point){
+        ArrayList<Quartet<String, String, ArrayList<Object>,Double>> result = new ArrayList<>();
+        WeightedGraph graph = floor.getGraph();
+        HashMap<String, Integer> point_id_map = floor.getPoint_id_map();
+        for (String common_point:floor.getCommon_points()){
+            Integer start_point_id = point_id_map.get(start_point);
+            final int[] pred = Dijkstra.dijkstra(graph, start_point_id);
+            Quartet Q = Dijkstra.getResultTuple(graph, point_id_map, pred, start_point, end_point);
+            result.add(Q);
+        }
+        return result;
+    }
+
+
 
 
     public static void main(String[] args) throws Exception {

@@ -17,6 +17,7 @@ import static test.Utils.print4J;
 public class Floor {
     private String floor_name;
     private WeightedGraph graph;
+    private ArrayList<String> common_points;
     private ArrayList<String> stairs;
     private ArrayList<String> lifts;
     private ArrayList<String> escalators;
@@ -26,9 +27,10 @@ public class Floor {
     }
 
 
-    public Floor(String floor_name,WeightedGraph graph, ArrayList<String> stairs, ArrayList<String> lifts, ArrayList<String> escalators, HashMap<String, Integer> point_id_map) {
+    public Floor(String floor_name,WeightedGraph graph,ArrayList<String> common_points, ArrayList<String> stairs, ArrayList<String> lifts, ArrayList<String> escalators, HashMap<String, Integer> point_id_map) {
         this.floor_name = floor_name;
         this.graph = graph;
+        this.common_points = common_points;
         this.stairs = stairs;
         this.lifts = lifts;
         this.escalators = escalators;
@@ -49,6 +51,14 @@ public class Floor {
 
     public void setGraph(WeightedGraph graph) {
         this.graph = graph;
+    }
+
+    public ArrayList<String> getCommon_points() {
+        return common_points;
+    }
+
+    public void setCommon_points(ArrayList<String> common_points) {
+        this.common_points = common_points;
     }
 
     public ArrayList<String> getStairs() {
@@ -89,6 +99,8 @@ public class Floor {
         print4J(this.point_id_map);
         System.out.println("WeightedGraph:");
         graph.print();
+        System.out.println("common_points");
+        System.out.println(common_points);
         System.out.println("stairs:");
         System.out.println(stairs.toString());
         System.out.println("lifts:");
