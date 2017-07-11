@@ -26,12 +26,30 @@ public class Main {
         System.out.println(floor1_result);
 
         // 找到最近的点
-        Double temp = 0.0;
+        Quartet<String, String, ArrayList<Object>,Double> nearest_stair = Quartet.with("a", "b", new ArrayList<>('a'), Double.MAX_VALUE);
+        Quartet<String, String, ArrayList<Object>,Double> nearest_lift = Quartet.with("a", "b", new ArrayList<>('a'), Double.MAX_VALUE);
+        Quartet<String, String, ArrayList<Object>,Double> nearest_escalator = Quartet.with("a", "b", new ArrayList<>('a'), Double.MAX_VALUE);
         for (Quartet<String, String, ArrayList<Object>,Double> q:floor1_result){
-            if (temp > q.getValue3()){
-                temp = q.getValue3();
+            // find the nearest Stair
+            if (q.getValue1().startsWith("S")){
+                if (q.getValue3() < nearest_stair.getValue3()){
+                    nearest_stair = q;
+                }
+
+            }else if(q.getValue1().startsWith("L")){
+                if (q.getValue3() < nearest_lift.getValue3()){
+                    nearest_lift = q;
+                }
+            }else if(q.getValue1().startsWith("E")){
+                if (q.getValue3() < nearest_escalator.getValue3()){
+                    nearest_escalator = q;
+                }
             }
+
         }
+        System.out.println(nearest_stair);
+        System.out.println(nearest_lift);
+        System.out.println(nearest_escalator);
 
 //        Floor floor2 = buildFloorFromFile("floor_2",filename2);
 //        ArrayList<Quartet<String, String, ArrayList<Object>,Double>> floor2_result = getResultWithinFloor(floor2);
