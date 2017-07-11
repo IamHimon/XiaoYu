@@ -378,12 +378,10 @@ public class Utils {
         ArrayList<Quartet<String, String, ArrayList<Object>,Double>> result = new ArrayList<>();
         WeightedGraph graph = floor.getGraph();
         HashMap<String, Integer> point_id_map = floor.getPoint_id_map();
-        for (String common_point:floor.getCommon_points()){
-            Integer start_point_id = point_id_map.get(start_point);
-            final int[] pred = Dijkstra.dijkstra(graph, start_point_id);
-            Quartet Q = Dijkstra.getResultTuple(graph, point_id_map, pred, start_point, end_point);
-            result.add(Q);
-        }
+        Integer start_point_id = point_id_map.get(start_point);
+        final int[] pred = Dijkstra.dijkstra(graph, start_point_id);
+        Quartet Q = Dijkstra.getResultTuple(graph, point_id_map, pred, start_point, end_point);
+        result.add(Q);
         return result;
     }
 
