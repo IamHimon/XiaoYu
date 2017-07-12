@@ -1,5 +1,6 @@
 package test;
 
+import com.sun.org.apache.xml.internal.resolver.readers.TR9401CatalogReader;
 import org.javatuples.Quartet;
 import org.omg.PortableServer.LIFESPAN_POLICY_ID;
 
@@ -354,7 +355,6 @@ public class Utils {
         WeightedGraph graph = floor.getGraph();
         HashMap<String, Integer> point_id_map = floor.getPoint_id_map();
         Integer start_point_id = point_id_map.get(start_point_name);
-        System.out.println(start_point_id);
         final int[] pred = Dijkstra.dijkstra(graph, start_point_id);
         //stairs
         for (String stair:floor.getStairs()){
@@ -368,24 +368,62 @@ public class Utils {
         }
         //escalator
         for (String escalator:floor.getEscalators()){
-            Quartet Q = Dijkstra.getResultTuple(graph, point_id_map,pred, start_point_name, escalator);
+            Quartet Q = Dijkstra.getResultTuple(graph, point_id_map, pred, start_point_name, escalator);
             result.add(Q);
         }
         return result;
     }
 
-    public static ArrayList<Quartet<String, String, ArrayList<Object>,Double>> getResultWithinFloor(Floor floor, String start_point, String end_point){
-        ArrayList<Quartet<String, String, ArrayList<Object>,Double>> result = new ArrayList<>();
+    public static Quartet<String, String, ArrayList<Object>,Double> getResultWithinFloor(Floor floor, String start_point, String end_point){
         WeightedGraph graph = floor.getGraph();
         HashMap<String, Integer> point_id_map = floor.getPoint_id_map();
         Integer start_point_id = point_id_map.get(start_point);
         final int[] pred = Dijkstra.dijkstra(graph, start_point_id);
         Quartet Q = Dijkstra.getResultTuple(graph, point_id_map, pred, start_point, end_point);
-        result.add(Q);
-        return result;
+
+        return Q;
     }
 
 
+    /*判断两层是不是同一个电梯/扶梯/楼梯,比如： S1a与 S2a是相同一个电梯*/
+    public static boolean isSameOne(Quartet<String, String, ArrayList<Object>,Double> a, Quartet<String, String, ArrayList<Object>,Double> b){
+        return (a.getValue1().charAt(0) == b.getValue1().charAt(0)) &&
+                (a.getValue1().charAt(a.getValue1().length()-1) == b.getValue1().charAt(b.getValue1().length()-1));
+    }
+
+    /*判断某一层有没有同一个电梯/扶梯/楼梯*/
+    public static boolean hasSameOne(ArrayList<Quartet<String, String, ArrayList<Object>,Double>> floor_result, Quartet<String, String, ArrayList<Object>,Double> point){
+        boolean HASONE = false;
+        for (Quartet<String, String, ArrayList<Object>,Double> q:floor_result){
+            if (isSameOne(q, point))
+                HASONE = true;
+        }
+        return HASONE;
+    }
+
+    public static boolean hasSameOne(Floor floor, String start_point, boolean is_start_point){
+        if (is_start_point){
+            return false;
+        }else {
+            for (String point:floor.getPoint_id_map().keySet()){
+                if ((point.charAt(0)==start_point.charAt(0))&&(point.charAt(point.length()-1)==start_point.charAt(start_point.length()-1))){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    public static String getSameOne(Floor floor, String start_point){
+        String SAMEONE = "";
+        for (String point:floor.getAll_points()){
+            if ((point.charAt(0)==start_point.charAt(0))&&(point.charAt(point.length()-1)==start_point.charAt(start_point.length()-1))){
+//                System.out.println(point);
+                return point;
+            }
+        }
+        return SAMEONE;
+    }
 
 
     public static void main(String[] args) throws Exception {

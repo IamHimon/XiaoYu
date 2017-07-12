@@ -21,6 +21,7 @@ public class Floor {
     private ArrayList<String> stairs;
     private ArrayList<String> lifts;
     private ArrayList<String> escalators;
+    private ArrayList<String> all_points;
     private HashMap<String, Integer> point_id_map;
 
     public Floor() {
@@ -91,6 +92,19 @@ public class Floor {
 
     public void setPoint_id_map(HashMap<String, Integer> point_id_map) {
         this.point_id_map = point_id_map;
+    }
+
+    public ArrayList<String> getAll_points() {
+        ArrayList<String> all = new ArrayList<>();
+        all.addAll(this.common_points);
+        all.addAll(this.lifts);
+        all.addAll(this.stairs);
+        all.addAll(this.escalators);
+        return all;
+    }
+
+    public void setAll_points(ArrayList<String> all_points) {
+        this.all_points = all_points;
     }
 
     public void describeFloor(){
