@@ -13,9 +13,28 @@ import java.util.regex.Pattern;
  * 工具类
  */
 public class Utils {
+    public static ArrayList<Point[]> AllPointsPairInBigGraph;
+    public static ArrayList<Point[]> LinkedPointsPair;
+
+    public static WeightedGraph buildBigGraph(ArrayList<Floor> floors) {
+        for (int i = 0; i < floors.size() - 1; i++) {
+            System.out.println(floors.get(i).getNum_floor());
+            System.out.println(floors.get(i+1).getNum_floor());
+            for (Point point:floors.get(i).getAllPoints()){
+                for (Point next_point:floors.get(i+1).getAllPoints()){
+
+                }
+            }
 
 
-    public static Floor buildFloorFromFile(String floor_name, String filename)throws Exception{
+        }
+
+        return new WeightedGraph(2);
+
+    }
+
+
+    public static Floor buildFloorFromFile(Integer num_floor, String floor_name, String filename)throws Exception{
         String regex = "^\\[[A-Z].+\\#[0-9]+(\\.[0-9]+)?\\,[0-9]+(\\.[0-9]+)?\\]\\*\\[[A-Z].+\\#[0-9]+(\\.[0-9]+)?\\,[0-9]+(\\.[0-9]+)?\\]$";
 
         FileInputStream inputStream = null;
@@ -24,7 +43,7 @@ public class Utils {
         String str;
         ArrayList<Point[]> allPointsPair = new ArrayList<>();
         List<Point> allPoints = new ArrayList<>();
-        List<Point> setPoints = new ArrayList<>();
+        ArrayList<Point> setPoints = new ArrayList<>();
         HashMap<String, Integer> point_id_map = new HashMap<>();
 
         try{
@@ -35,11 +54,11 @@ public class Utils {
             {
                 if (Pattern.matches(regex, str)){
                     String[] line = str.split("\\*");
-                    Point p1 = buildPoint(line[0]);
+                    Point p1 = buildPoint(line[0], floor_name); //需要给普通点重命名
 //                    p1.printPoint();
                     allPoints.add(p1);
 
-                    Point p2 = buildPoint(line[1]);
+                    Point p2 = buildPoint(line[1], floor_name);
 //                    p2.printPoint();
                     allPoints.add(p2);
                     allPointsPair.add(new Point[]{p1, p2});
@@ -126,7 +145,7 @@ public class Utils {
             t.addEdge(target, source, weight);
         }
 
-        return new Floor(floor_name, t,common_points, stairs,lifts,escalators, point_id_map);
+        return new Floor(num_floor, floor_name, t,common_points, stairs,lifts,escalators, point_id_map, allPointsPair, setPoints);
     }
 
     /*
@@ -255,11 +274,28 @@ public class Utils {
             point[i++] = Double.valueOf(s);
         }
         p.setPoint(point);
-
         return p;
     }
 
+    /*给普通点重命名，比如一层C1： "C1" => "floor1_C1"*/
+    private static Point buildPoint(String line,String floor_name){
+        Point p = new Point();
+        String[] split_lines = line.substring(line.indexOf("[")+1, line.indexOf("]")).split("#");
+        if (split_lines[0].startsWith("C"))
+            p.setLabel(floor_name+"_"+split_lines[0]);
+        else
+            p.setLabel(split_lines[0]);
 
+        Double[] point = new Double[2];
+        int i = 0;
+        for (String s:split_lines[1].split(",")){
+            point[i++] = Double.valueOf(s);
+        }
+        p.setPoint(point);
+        return p;
+    }
+
+    /*判断两个Point是不是同一个点，名字相同，坐标相同*/
     private static boolean isEqual(Point p1, Point p2){
         return (p1.getLabel().equals(p2.getLabel())) && (p1.getPoint()[0].equals(p2.getPoint()[0]))
                 && (p1.getPoint()[1].equals(p2.getPoint()[1]));
@@ -401,6 +437,10 @@ public class Utils {
         return HASONE;
     }
 
+    /*判断这一层Floor，有没有跟start_point的同一个电梯/扶梯/楼梯
+    *如果是初始点则直接返回false
+    * 判断开头和最后一位："L1a"与 "L2a"就是相同的点。
+    * */
     public static boolean hasSameOne(Floor floor, String start_point, boolean is_start_point){
         if (is_start_point){
             return false;
@@ -414,6 +454,7 @@ public class Utils {
         return false;
     }
 
+
     public static String getSameOne(Floor floor, String start_point){
         String SAMEONE = "";
         for (String point:floor.getAll_points()){
@@ -425,7 +466,9 @@ public class Utils {
         return SAMEONE;
     }
 
-    /*默认aim_way=S,L,E,分别代表stair，lift，escalator*/
+    /*
+    *判断某一层是不是有电梯/扶梯/楼梯
+    默认aim_way=S,L,E,分别代表stair，lift，escalator*/
     public static boolean hasSLE(Floor floor, String aim_way) {
         if (aim_way.equals("E")) {
             return (floor.getEscalators().size() == 0);
@@ -434,6 +477,22 @@ public class Utils {
             return (floor.getStairs().size() == 0);
         }
         return aim_way.equals("L") && (floor.getLifts().size() == 0);
+    }
+
+    /*获得所有Floor中的最短路径*/
+    public static Double getShortestEdges(ArrayList<Floor> floors){
+        Double result = Double.MAX_VALUE;
+        for (Floor floor:floors) {
+            Double[][] edges = floor.getGraph().edges;
+            int vexs = floor.getGraph().vexs;
+            for (int i=0;i<vexs;i++){
+                for (int j=0;j<vexs;j++){
+                    if ((result > edges[i][j])&&(edges[i][j]!=0))
+                        result = edges[i][j];
+                }
+            }
+        }
+        return result;
     }
 
     public static void main(String[] args) throws Exception {

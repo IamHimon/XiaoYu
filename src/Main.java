@@ -1,6 +1,7 @@
 import org.javatuples.Quartet;
 import test.Dijkstra;
 import test.Floor;
+import test.Point;
 import test.WeightedGraph;
 
 import java.util.ArrayList;
@@ -276,30 +277,53 @@ public class Main {
         String filename4l = "src/data/4楼";
         String filename5l = "src/data/5楼";
 //        Floor floor3l = buildFloorFromFile("floor_3l", filename3l);
-        Floor floor4l = buildFloorFromFile("floor_4l", filename4l);
+//        Floor floor4l = buildFloorFromFile("floor_4l", filename4l);
 //        Floor floor5l = buildFloorFromFile("floor_5l", filename5l);
 //        floor3l.describeFloor();
-        floor4l.describeFloor();
+//        floor4l.describeFloor();
 //        floor5l.describeFloor();
 //        String filename4 = "src/data/4楼";
 //        String filename5 = "src/data/5楼";
 
+        //按顺序添加floor
 //一层
 
-        Floor floor1 = buildFloorFromFile("floor_1", filename1);
+        Floor floor1 = buildFloorFromFile(1, "floor1", filename1);
+//        floor1.printPointsPairs();
+//        System.out.println(floor1.getAll_points());
+
+
+//        for (Point[] floorsPair:floor1.getAllPointsPair()){
+//            for (Point p:floorsPair){
+//                p.printPoint();
+//            }
+//        }
+//        print4J(floor1.getPoint_id_map());
 
 //二层
 
-        Floor floor2 = buildFloorFromFile("floor_2", filename2);
+        Floor floor2 = buildFloorFromFile(2, "floor2", filename2);
+//        floor2.printPointsPairs();
 
 //三层
 
-        Floor floor3 = buildFloorFromFile("floor_3", filename3);
+        Floor floor3 = buildFloorFromFile(3, "floor3", filename3);
 
         ArrayList<Floor> floors = new ArrayList<>();
         floors.add(floor1);
         floors.add(floor2);
         floors.add(floor3);
+
+        buildBigGraph(floors);
+
+
+
+
+
+//
+//        Double shortestEdges = getShortestEdges(floors);
+//        System.out.println(shortestEdges);
+
 
 //        stair_climbing((ArrayList<Floor>) floors.clone(), "C1", "C3", true);
 //        lift_climbing((ArrayList<Floor>) floors.clone(), "C1", "C3", true);

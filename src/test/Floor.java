@@ -15,6 +15,7 @@ import static test.Utils.print4J;
  * 然后电梯，楼梯，扶梯分别构成数组。
  */
 public class Floor {
+    private Integer num_floor; //层数
     private String floor_name;
     private WeightedGraph graph;
     private ArrayList<String> common_points;
@@ -23,12 +24,17 @@ public class Floor {
     private ArrayList<String> escalators;
     private ArrayList<String> all_points;
     private HashMap<String, Integer> point_id_map;
+    private ArrayList<Point[]> allPointsPair;
+    private ArrayList<Point> allPoints; //不重复
 
     public Floor() {
     }
 
 
-    public Floor(String floor_name,WeightedGraph graph,ArrayList<String> common_points, ArrayList<String> stairs, ArrayList<String> lifts, ArrayList<String> escalators, HashMap<String, Integer> point_id_map) {
+    public Floor(Integer num_floor,String floor_name,WeightedGraph graph,ArrayList<String> common_points, ArrayList<String> stairs,
+                 ArrayList<String> lifts, ArrayList<String> escalators, HashMap<String, Integer> point_id_map,
+                 ArrayList<Point[]> allPointsPair, ArrayList<Point> allPoints) {
+        this.num_floor = num_floor;
         this.floor_name = floor_name;
         this.graph = graph;
         this.common_points = common_points;
@@ -36,6 +42,16 @@ public class Floor {
         this.lifts = lifts;
         this.escalators = escalators;
         this.point_id_map = point_id_map;
+        this.allPointsPair = allPointsPair;
+        this.all_points = all_points;
+    }
+
+    public Integer getNum_floor() {
+        return num_floor;
+    }
+
+    public void setNum_floor(Integer num_floor) {
+        this.num_floor = num_floor;
     }
 
     public String getFloor_name() {
@@ -107,6 +123,22 @@ public class Floor {
         this.all_points = all_points;
     }
 
+    public ArrayList<Point[]> getAllPointsPair() {
+        return allPointsPair;
+    }
+
+    public void setAllPointsPair(ArrayList<Point[]> allPointsPair) {
+        this.allPointsPair = allPointsPair;
+    }
+
+    public ArrayList<Point> getAllPoints() {
+        return allPoints;
+    }
+
+    public void setAllPoints(ArrayList<Point> allPoints) {
+        this.allPoints = allPoints;
+    }
+
     public void describeFloor(){
         System.out.println("Floor: " + this.floor_name);
         System.out.println("points ID map:");
@@ -122,6 +154,14 @@ public class Floor {
         System.out.println("escalators:");
         System.out.println(escalators.toString());
     }
+
+    public void printPointsPairs(){
+        for (Point[] pair:this.allPointsPair){
+            System.out.println(pair[0].getLabel() +" -> "+ pair[1].getLabel());
+        }
+    }
+
+
 
 
 }
