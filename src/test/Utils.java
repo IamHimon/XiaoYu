@@ -425,6 +425,16 @@ public class Utils {
         return SAMEONE;
     }
 
+    /*默认aim_way=S,L,E,分别代表stair，lift，escalator*/
+    public static boolean hasSLE(Floor floor, String aim_way) {
+        if (aim_way.equals("E")) {
+            return (floor.getEscalators().size() == 0);
+        }
+        if (aim_way.equals("S")) {
+            return (floor.getStairs().size() == 0);
+        }
+        return aim_way.equals("L") && (floor.getLifts().size() == 0);
+    }
 
     public static void main(String[] args) throws Exception {
         String filename = "src/data/test_points1";
