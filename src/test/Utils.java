@@ -15,6 +15,7 @@ import java.util.regex.Pattern;
 public class Utils {
     //相邻两层之间的对应的两个点
     public static ArrayList<Point[]> LinkedPointsPair = new ArrayList<>();
+    public  static HashMap<String, Integer> point_id_map = new HashMap<>();
 
     //构造LinkedPointsPair
     public static void buildLinkedPointsPair(ArrayList<Floor> floors) {
@@ -53,7 +54,7 @@ public class Utils {
         //构造大图
         ArrayList<Point[]> allPointsPair = new ArrayList<>();
         ArrayList<Point> allPoints = new ArrayList<>();
-        HashMap<String, Integer> point_id_map = new HashMap<>();
+//        HashMap<String, Integer> point_id_map = new HashMap<>();
         for (Floor floor:floors){
             allPointsPair.addAll(floor.getAllPointsPair());
             allPoints.addAll(floor.getAllPoints());
