@@ -43,7 +43,7 @@ public class Floor {
         this.escalators = escalators;
         this.point_id_map = point_id_map;
         this.allPointsPair = allPointsPair;
-        this.all_points = all_points;
+        this.allPoints = allPoints;
     }
 
     public Integer getNum_floor() {
@@ -161,6 +161,35 @@ public class Floor {
         }
     }
 
+    public ArrayList<Point> getLiftPoints() {
+        ArrayList<Point> liftPoints = new ArrayList<>();
+        for (Point point : this.allPoints) {
+            if (point.getLabel().startsWith("L")) {
+                liftPoints.add(point);
+            }
+        }
+        return liftPoints;
+    }
+
+    public ArrayList<Point> getStairPoints() {
+        ArrayList<Point> stairPoints = new ArrayList<>();
+        for (Point point : this.allPoints) {
+            if (point.getLabel().startsWith("S")) {
+                stairPoints.add(point);
+            }
+        }
+        return stairPoints;
+    }
+
+    public ArrayList<Point> getEscalatorPoints() {
+        ArrayList<Point> escalatorPoints = new ArrayList<>();
+        for (Point point : this.allPoints) {
+            if (point.getLabel().startsWith("E")) {
+                escalatorPoints.add(point);
+            }
+        }
+        return escalatorPoints;
+    }
 
 
 

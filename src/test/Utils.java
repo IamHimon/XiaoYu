@@ -13,24 +13,87 @@ import java.util.regex.Pattern;
  * 工具类
  */
 public class Utils {
-    public static ArrayList<Point[]> AllPointsPairInBigGraph;
-    public static ArrayList<Point[]> LinkedPointsPair;
+    //相邻两层之间的对应的两个点
+    public static ArrayList<Point[]> LinkedPointsPair = new ArrayList<>();
 
-    public static WeightedGraph buildBigGraph(ArrayList<Floor> floors) {
+    //构造LinkedPointsPair
+    public static void buildLinkedPointsPair(ArrayList<Floor> floors) {
         for (int i = 0; i < floors.size() - 1; i++) {
-            System.out.println(floors.get(i).getNum_floor());
-            System.out.println(floors.get(i+1).getNum_floor());
-            for (Point point:floors.get(i).getAllPoints()){
-                for (Point next_point:floors.get(i+1).getAllPoints()){
-
+            for (Point point:floors.get(i).getLiftPoints()){
+                for (Point next_point:floors.get(i+1).getLiftPoints()){
+                    if (isSameOne(point, next_point)&&(floors.get(i+1).getNum_floor() - floors.get(i).getNum_floor()==1)){
+                        LinkedPointsPair.add(new Point[]{point, next_point});
+                    }
+                }
+            }
+            for (Point point:floors.get(i).getStairPoints()) {
+                for (Point next_point : floors.get(i + 1).getStairPoints()) {
+                    if (isSameOne(point, next_point)&&(floors.get(i+1).getNum_floor() - floors.get(i).getNum_floor()==1)) {
+                        LinkedPointsPair.add(new Point[]{point, next_point});
+                    }
+                }
+            }
+            for (Point point:floors.get(i).getEscalatorPoints()) {
+                for (Point next_point : floors.get(i + 1).getEscalatorPoints()) {
+                    if (isSameOne(point, next_point)&&(floors.get(i+1).getNum_floor() - floors.get(i).getNum_floor()==1)) {
+                        LinkedPointsPair.add(new Point[]{point, next_point});
+                    }
                 }
             }
 
 
         }
+    }
 
-        return new WeightedGraph(2);
+    public static WeightedGraph buildBigGraph(ArrayList<Floor> floors){
+        Double shortestEdges = getShortestEdges(floors);
+//        buildBigGraph(floors, shortestEdges);
+        buildLinkedPointsPair(floors);
 
+        //构造大图
+        ArrayList<Point[]> allPointsPair = new ArrayList<>();
+        ArrayList<Point> allPoints = new ArrayList<>();
+        HashMap<String, Integer> point_id_map = new HashMap<>();
+        for (Floor floor:floors){
+            allPointsPair.addAll(floor.getAllPointsPair());
+            allPoints.addAll(floor.getAllPoints());
+        }
+//        allPointsPair.addAll(LinkedPointsPair);
+        //
+        for (int i=0;i<allPoints.size();i++){
+            point_id_map.put(allPoints.get(i).getLabel(), i);
+        }
+
+        System.out.println(allPoints.size());
+        print4J(point_id_map);
+
+        WeightedGraph t = new WeightedGraph(point_id_map.size());
+        for (Object obj:point_id_map.keySet()){
+            t.setLabel(point_id_map.get(obj), obj);
+        }
+
+        for (int i = 0; i<allPointsPair.size();i++){
+            int source = point_id_map.get(allPointsPair.get(i)[0].getLabel());
+            int target = point_id_map.get(allPointsPair.get(i)[1].getLabel());
+            Double weight = distanceBetweenTwoPoints(allPointsPair.get(i)[0], allPointsPair.get(i)[1]);
+
+            t.addEdge(source, target, weight);
+            // 无向图
+            t.addEdge(target, source, weight);
+        }
+        //层间点单独构建
+        for (int i = 0; i<LinkedPointsPair.size();i++){
+            int source = point_id_map.get(LinkedPointsPair.get(i)[0].getLabel());
+            int target = point_id_map.get(LinkedPointsPair.get(i)[1].getLabel());
+
+            t.addEdge(source, target, shortestEdges/2);
+            // 无向图
+            t.addEdge(target, source, shortestEdges/2);
+        }
+
+//        t.print();
+
+        return t;
     }
 
 
@@ -296,12 +359,12 @@ public class Utils {
     }
 
     /*判断两个Point是不是同一个点，名字相同，坐标相同*/
-    private static boolean isEqual(Point p1, Point p2){
+    public static boolean isEqual(Point p1, Point p2){
         return (p1.getLabel().equals(p2.getLabel())) && (p1.getPoint()[0].equals(p2.getPoint()[0]))
                 && (p1.getPoint()[1].equals(p2.getPoint()[1]));
     }
 
-    private static Double distanceBetweenTwoPoints(Point p1, Point p2){
+    public static Double distanceBetweenTwoPoints(Point p1, Point p2){
         double _x = Math.abs(p1.getPoint()[0] - p2.getPoint()[0]);
         double _y = Math.abs(p1.getPoint()[1] - p2.getPoint()[1]);
         return Math.sqrt(_x*_x + _y*_y);
@@ -425,6 +488,11 @@ public class Utils {
     public static boolean isSameOne(Quartet<String, String, ArrayList<Object>,Double> a, Quartet<String, String, ArrayList<Object>,Double> b){
         return (a.getValue1().charAt(0) == b.getValue1().charAt(0)) &&
                 (a.getValue1().charAt(a.getValue1().length()-1) == b.getValue1().charAt(b.getValue1().length()-1));
+    }
+
+    public static boolean isSameOne(Point a, Point b){
+        return (a.getLabel().charAt(0)==b.getLabel().charAt(0)&&
+                (a.getLabel().charAt(a.getLabel().length()-1)==b.getLabel().charAt(b.getLabel().length()-1)));
     }
 
     /*判断某一层有没有同一个电梯/扶梯/楼梯*/

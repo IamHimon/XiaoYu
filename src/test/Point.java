@@ -42,7 +42,7 @@ public class Point {
         System.out.println(this.getLabel() + ": [" + this.getPoint()[0] + "," + this.getPoint()[1] + "]");
     }
 
-    public boolean isNUll(){
+    public boolean isNull(){
         return (this.label==null)&&(this.point ==null);
     }
 

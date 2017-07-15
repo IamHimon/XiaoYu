@@ -88,7 +88,7 @@ public class Dijkstra {
         pathID.add(0, s);
         System.out.println(path);
 //        System.out.println(pathID);
-        System.out.println(G.pathDistance(pathID));
+//        System.out.println(G.pathDistance(pathID));
     }
 
     public static Quartet getResultTuple(WeightedGraph G, HashMap<String, Integer> point_id_map,int[] pred, String start, String end){

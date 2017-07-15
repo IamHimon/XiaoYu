@@ -6,6 +6,7 @@ import test.WeightedGraph;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Objects;
 
 import static test.Utils.*;
@@ -291,14 +292,9 @@ public class Main {
         Floor floor1 = buildFloorFromFile(1, "floor1", filename1);
 //        floor1.printPointsPairs();
 //        System.out.println(floor1.getAll_points());
+//        System.out.println(floor1.getLiftPoints());
 
 
-//        for (Point[] floorsPair:floor1.getAllPointsPair()){
-//            for (Point p:floorsPair){
-//                p.printPoint();
-//            }
-//        }
-//        print4J(floor1.getPoint_id_map());
 
 //二层
 
@@ -314,8 +310,11 @@ public class Main {
         floors.add(floor2);
         floors.add(floor3);
 
-        buildBigGraph(floors);
+        WeightedGraph t = buildBigGraph(floors);
 
+        final int[] pred = Dijkstra.dijkstra(t, 0);
+
+        Dijkstra.printPath(t, pred, 0, 29);
 
 
 
