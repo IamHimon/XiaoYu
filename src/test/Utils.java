@@ -64,8 +64,8 @@ public class Utils {
             allFloor_point_id_map.put(allPoints.get(i).getLabel(), i);
         }
 
-        System.out.println(allPoints.size());
-        print4J(allFloor_point_id_map);
+//        System.out.println(allPoints.size());
+//        print4J(allFloor_point_id_map);
 
         WeightedGraph t = new WeightedGraph(allFloor_point_id_map.size());
         for (Object obj:allFloor_point_id_map.keySet()){
@@ -206,6 +206,10 @@ public class Utils {
             t.addEdge(source, target, weight);
             // 无向图
             t.addEdge(target, source, weight);
+        }
+
+        if (!t.isConnected()){
+            throw new Exception("The graph is not connected!");
         }
 
         return new Floor(num_floor, floor_name, t,common_points, stairs,lifts,escalators, point_id_map, allPointsPair, setPoints);

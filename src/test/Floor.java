@@ -1,10 +1,7 @@
 package test;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 import static test.Utils.print4J;
 
@@ -22,14 +19,9 @@ public class Floor {
     private ArrayList<String> stairs;
     private ArrayList<String> lifts;
     private ArrayList<String> escalators;
-    private ArrayList<String> all_points;
     private HashMap<String, Integer> point_id_map;
     private ArrayList<Point[]> allPointsPair;
     private ArrayList<Point> allPoints; //不重复
-
-    public Floor() {
-    }
-
 
     public Floor(Integer num_floor,String floor_name,WeightedGraph graph,ArrayList<String> common_points, ArrayList<String> stairs,
                  ArrayList<String> lifts, ArrayList<String> escalators, HashMap<String, Integer> point_id_map,
@@ -119,9 +111,6 @@ public class Floor {
         return all;
     }
 
-    public void setAll_points(ArrayList<String> all_points) {
-        this.all_points = all_points;
-    }
 
     public ArrayList<Point[]> getAllPointsPair() {
         return allPointsPair;
@@ -190,7 +179,6 @@ public class Floor {
         }
         return escalatorPoints;
     }
-
 
 
 }

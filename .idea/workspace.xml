@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0dc4e9a1-2421-4e75-96da-1cf64eee34a9" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/XiaoYu/Main.class" afterPath="$PROJECT_DIR$/out/production/XiaoYu/Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/Floor.java" afterPath="$PROJECT_DIR$/src/test/Floor.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/Utils.java" afterPath="$PROJECT_DIR$/src/test/Utils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/WeightedGraph.java" afterPath="$PROJECT_DIR$/src/test/WeightedGraph.java" />
     </list>
     <ignored path="XiaoYu.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,13 +32,14 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+            <state relative-caret-position="-49">
+              <caret line="253" column="42" lean-forward="true" selection-start-line="253" selection-start-column="42" selection-end-line="253" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#stair_climbing#0;class#Main#0" expanded="false" />
                 <element signature="method#lift_climbing#0;class#Main#0" expanded="false" />
                 <element signature="method#escalator_climbing#0;class#Main#0" expanded="false" />
+                <marker date="1500106628569" expanded="false" signature="1457:4244" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -44,31 +48,25 @@
       <file leaf-file-name="Utils.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/Utils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1311">
-              <caret line="213" column="6" lean-forward="true" selection-start-line="213" selection-start-column="6" selection-end-line="213" selection-end-column="6" />
+            <state relative-caret-position="96">
+              <caret line="210" column="22" lean-forward="false" selection-start-line="210" selection-start-column="22" selection-end-line="210" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#buildLinkedPointsPair#0;class#Utils#0" expanded="false" />
-                <element signature="method#buildBigGraph#0;class#Utils#0" expanded="false" />
-                <element signature="method#buildFloorFromFile#0;class#Utils#0" expanded="false" />
                 <element signature="method#buildFromFile#0;class#Utils#0" expanded="false" />
                 <element signature="method#buildPoint#0;class#Utils#0" expanded="false" />
                 <element signature="method#buildPoint#1;class#Utils#0" expanded="false" />
                 <element signature="method#isEqual#0;class#Utils#0" expanded="false" />
                 <element signature="method#print4J#0;class#Utils#0" expanded="false" />
-                <element signature="e#14246#14292#0" expanded="false" />
+                <element signature="e#14356#14402#0" expanded="false" />
                 <element signature="method#hasErrorPoint#0;class#Utils#0" expanded="false" />
                 <element signature="method#getResultWithinFloor#0;class#Utils#0" expanded="false" />
-                <element signature="method#getResultWithinFloor#1;class#Utils#0" expanded="false" />
-                <element signature="method#getResultWithinFloor#2;class#Utils#0" expanded="false" />
                 <element signature="method#isSameOne#0;class#Utils#0" expanded="false" />
                 <element signature="method#isSameOne#1;class#Utils#0" expanded="false" />
                 <element signature="method#hasSameOne#0;class#Utils#0" expanded="false" />
                 <element signature="method#hasSameOne#1;class#Utils#0" expanded="false" />
                 <element signature="method#getSameOne#0;class#Utils#0" expanded="false" />
-                <element signature="method#hasSLE#0;class#Utils#0" expanded="false" />
                 <element signature="method#getShortestEdges#0;class#Utils#0" expanded="false" />
-                <element signature="method#main#0;class#Utils#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -77,18 +75,10 @@
       <file leaf-file-name="Point.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/Point.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="572">
-              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+            <state relative-caret-position="78">
+              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding>
-                <element signature="e#341#342#0" expanded="false" />
-                <element signature="e#369#370#0" expanded="false" />
-                <element signature="e#411#412#0" expanded="false" />
-                <element signature="e#445#446#0" expanded="false" />
-                <element signature="e#479#480#0" expanded="false" />
-                <element signature="e#507#508#0" expanded="false" />
                 <element signature="method#setPoint#0;class#Point#0" expanded="false" />
-                <element signature="e#919#920#0" expanded="false" />
-                <element signature="e#981#982#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -97,54 +87,12 @@
       <file leaf-file-name="Floor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/Floor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="192" column="0" lean-forward="false" selection-start-line="192" selection-start-column="0" selection-end-line="192" selection-end-column="0" />
+            <state relative-caret-position="157">
+              <caret line="23" column="45" lean-forward="false" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
               <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="method#Floor#1;class#Floor#0" expanded="false" />
-                <element signature="e#1495#1496#0" expanded="false" />
-                <element signature="e#1527#1528#0" expanded="false" />
-                <element signature="e#1578#1579#0" expanded="false" />
-                <element signature="e#1620#1621#0" expanded="false" />
-                <element signature="e#1657#1658#0" expanded="false" />
-                <element signature="e#1690#1691#0" expanded="false" />
-                <element signature="e#1742#1743#0" expanded="false" />
-                <element signature="e#1786#1787#0" expanded="false" />
-                <element signature="e#1825#1826#0" expanded="false" />
-                <element signature="e#1853#1854#0" expanded="false" />
-                <element signature="e#1902#1903#0" expanded="false" />
-                <element signature="e#1936#1937#0" expanded="false" />
-                <element signature="e#1987#1988#0" expanded="false" />
-                <element signature="e#2023#2024#0" expanded="false" />
-                <element signature="e#2092#2093#0" expanded="false" />
-                <element signature="e#2142#2143#0" expanded="false" />
-                <element signature="e#2186#2187#0" expanded="false" />
-                <element signature="e#2215#2216#0" expanded="false" />
-                <element signature="e#2270#2271#0" expanded="false" />
-                <element signature="e#2306#2307#0" expanded="false" />
-                <element signature="e#2349#2350#0" expanded="false" />
-                <element signature="e#2377#2378#0" expanded="false" />
-                <element signature="e#2430#2431#0" expanded="false" />
-                <element signature="e#2464#2465#0" expanded="false" />
-                <element signature="e#2512#2513#0" expanded="false" />
-                <element signature="e#2545#2546#0" expanded="false" />
-                <element signature="e#2608#2609#0" expanded="false" />
-                <element signature="e#2652#2653#0" expanded="false" />
-                <element signature="e#2709#2710#0" expanded="false" />
-                <element signature="e#2744#2745#0" expanded="false" />
-                <element signature="e#2818#2819#0" expanded="false" />
-                <element signature="e#2866#2867#0" expanded="false" />
-                <element signature="e#3196#3197#0" expanded="false" />
-                <element signature="e#3240#3241#0" expanded="false" />
-                <element signature="e#3292#3293#0" expanded="false" />
-                <element signature="e#3328#3329#0" expanded="false" />
-                <element signature="e#3398#3399#0" expanded="false" />
-                <element signature="e#3448#3449#0" expanded="false" />
-                <element signature="e#3494#3495#0" expanded="false" />
-                <element signature="e#3526#3527#0" expanded="false" />
-                <element signature="e#3586#3587#0" expanded="false" />
-                <element signature="e#3628#3629#0" expanded="false" />
+                <element signature="method#getAll_points#0;class#Floor#0" expanded="false" />
                 <element signature="method#describeFloor#0;class#Floor#0" expanded="false" />
+                <element signature="method#printPointsPairs#0;class#Floor#0" expanded="false" />
                 <element signature="method#getLiftPoints#0;class#Floor#0" expanded="false" />
                 <element signature="method#getStairPoints#0;class#Floor#0" expanded="false" />
                 <element signature="method#getEscalatorPoints#0;class#Floor#0" expanded="false" />
@@ -156,8 +104,8 @@
       <file leaf-file-name="WeightedGraph.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/WeightedGraph.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="78">
-              <caret line="15" column="49" lean-forward="true" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
+            <state relative-caret-position="107">
+              <caret line="154" column="0" lean-forward="false" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
               <folding>
                 <element signature="method#myFill#0;class#WeightedGraph#0" expanded="false" />
                 <element signature="method#neighbors_directed#0;class#WeightedGraph#0" expanded="false" />
@@ -166,7 +114,6 @@
                 <element signature="method#GetFirst#0;class#WeightedGraph#0" expanded="false" />
                 <element signature="method#GetNext#0;class#WeightedGraph#0" expanded="false" />
                 <element signature="method#DFSVGraph#0;class#WeightedGraph#0" expanded="false" />
-                <element signature="method#isConnected#0;class#WeightedGraph#0" expanded="false" />
                 <element signature="method#pathDistance#0;class#WeightedGraph#0" expanded="false" />
               </folding>
             </state>
@@ -176,10 +123,10 @@
       <file leaf-file-name="Dijkstra.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/Dijkstra.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+            <state relative-caret-position="174">
+              <caret line="91" column="5" lean-forward="true" selection-start-line="91" selection-start-column="5" selection-end-line="91" selection-end-column="5" />
               <folding>
-                <element signature="method#minVertex#0;class#Dijkstra#0" expanded="false" />
+                <element signature="method#printPath#0;class#Dijkstra#0" expanded="false" />
                 <element signature="method#getResultTuple#0;class#Dijkstra#0" expanded="false" />
               </folding>
             </state>
@@ -194,6 +141,11 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>all_points</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="UPDATE_TYPE" value="MERGE" />
@@ -212,18 +164,18 @@
         <option value="$PROJECT_DIR$/src/test/Node.java" />
         <option value="$PROJECT_DIR$/src/test/test.java" />
         <option value="$PROJECT_DIR$/src/data/test_points" />
-        <option value="$PROJECT_DIR$/src/data/test_points2" />
-        <option value="$PROJECT_DIR$/src/test/WeightedGraph.java" />
         <option value="$PROJECT_DIR$/src/test/testInJava.java" />
         <option value="$PROJECT_DIR$/src/data/3楼" />
         <option value="$PROJECT_DIR$/src/data/4楼" />
         <option value="$PROJECT_DIR$/src/data/5楼" />
         <option value="$PROJECT_DIR$/src/test/Point.java" />
-        <option value="$PROJECT_DIR$/src/test/Floor.java" />
+        <option value="$PROJECT_DIR$/src/data/test_points2" />
         <option value="$PROJECT_DIR$/src/data/test_points3" />
+        <option value="$PROJECT_DIR$/src/test/Floor.java" />
         <option value="$PROJECT_DIR$/src/test/Dijkstra.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/test/Utils.java" />
+        <option value="$PROJECT_DIR$/src/test/WeightedGraph.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
       </list>
     </option>
   </component>
@@ -295,6 +247,48 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="External Libraries" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="XiaoYu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="XiaoYu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="XiaoYu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="XiaoYu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="XiaoYu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="XiaoYu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -734,7 +728,14 @@
       <option name="project" value="LOCAL" />
       <updated>1500098304943</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Starbucks coding">
+      <created>1500098493357</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1500098493357</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -762,18 +763,18 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41967213" sideWeight="0.50907713" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295082" sideWeight="0.48789713" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29836065" sideWeight="0.48789713" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295082" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295082" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15128593" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10438729" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3611111" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39180326" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -866,7 +867,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="19" />
+      <option name="time" value="21" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -880,51 +881,9 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="method#Floor#1;class#Floor#0" expanded="false" />
-            <element signature="e#1495#1496#0" expanded="false" />
-            <element signature="e#1527#1528#0" expanded="false" />
-            <element signature="e#1578#1579#0" expanded="false" />
-            <element signature="e#1620#1621#0" expanded="false" />
-            <element signature="e#1657#1658#0" expanded="false" />
-            <element signature="e#1690#1691#0" expanded="false" />
-            <element signature="e#1742#1743#0" expanded="false" />
-            <element signature="e#1786#1787#0" expanded="false" />
-            <element signature="e#1825#1826#0" expanded="false" />
-            <element signature="e#1853#1854#0" expanded="false" />
-            <element signature="e#1902#1903#0" expanded="false" />
-            <element signature="e#1936#1937#0" expanded="false" />
-            <element signature="e#1987#1988#0" expanded="false" />
-            <element signature="e#2023#2024#0" expanded="false" />
-            <element signature="e#2092#2093#0" expanded="false" />
-            <element signature="e#2142#2143#0" expanded="false" />
-            <element signature="e#2186#2187#0" expanded="false" />
-            <element signature="e#2215#2216#0" expanded="false" />
-            <element signature="e#2270#2271#0" expanded="false" />
-            <element signature="e#2306#2307#0" expanded="false" />
-            <element signature="e#2349#2350#0" expanded="false" />
-            <element signature="e#2377#2378#0" expanded="false" />
-            <element signature="e#2430#2431#0" expanded="false" />
-            <element signature="e#2464#2465#0" expanded="false" />
-            <element signature="e#2512#2513#0" expanded="false" />
-            <element signature="e#2545#2546#0" expanded="false" />
-            <element signature="e#2608#2609#0" expanded="false" />
-            <element signature="e#2652#2653#0" expanded="false" />
-            <element signature="e#2709#2710#0" expanded="false" />
-            <element signature="e#2744#2745#0" expanded="false" />
-            <element signature="e#2818#2819#0" expanded="false" />
-            <element signature="e#2866#2867#0" expanded="false" />
-            <element signature="e#3196#3197#0" expanded="false" />
-            <element signature="e#3240#3241#0" expanded="false" />
-            <element signature="e#3292#3293#0" expanded="false" />
-            <element signature="e#3328#3329#0" expanded="false" />
-            <element signature="e#3398#3399#0" expanded="false" />
-            <element signature="e#3448#3449#0" expanded="false" />
-            <element signature="e#3494#3495#0" expanded="false" />
-            <element signature="e#3526#3527#0" expanded="false" />
-            <element signature="e#3586#3587#0" expanded="false" />
-            <element signature="e#3628#3629#0" expanded="false" />
+            <element signature="method#getAll_points#0;class#Floor#0" expanded="false" />
             <element signature="method#describeFloor#0;class#Floor#0" expanded="false" />
+            <element signature="method#printPointsPairs#0;class#Floor#0" expanded="false" />
             <element signature="method#getLiftPoints#0;class#Floor#0" expanded="false" />
             <element signature="method#getStairPoints#0;class#Floor#0" expanded="false" />
             <element signature="method#getEscalatorPoints#0;class#Floor#0" expanded="false" />
@@ -937,7 +896,7 @@
         <state relative-caret-position="0">
           <caret line="102" column="24" lean-forward="false" selection-start-line="102" selection-start-column="24" selection-end-line="102" selection-end-column="24" />
           <folding>
-            <element signature="method#minVertex#0;class#Dijkstra#0" expanded="false" />
+            <element signature="method#printPath#0;class#Dijkstra#0" expanded="false" />
             <element signature="method#getResultTuple#0;class#Dijkstra#0" expanded="false" />
           </folding>
         </state>
@@ -955,7 +914,6 @@
             <element signature="method#GetFirst#0;class#WeightedGraph#0" expanded="false" />
             <element signature="method#GetNext#0;class#WeightedGraph#0" expanded="false" />
             <element signature="method#DFSVGraph#0;class#WeightedGraph#0" expanded="false" />
-            <element signature="method#isConnected#0;class#WeightedGraph#0" expanded="false" />
             <element signature="method#pathDistance#0;class#WeightedGraph#0" expanded="false" />
           </folding>
         </state>
@@ -966,15 +924,7 @@
         <state relative-caret-position="0">
           <caret line="38" column="5" lean-forward="false" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
           <folding>
-            <element signature="e#341#342#0" expanded="false" />
-            <element signature="e#369#370#0" expanded="false" />
-            <element signature="e#411#412#0" expanded="false" />
-            <element signature="e#445#446#0" expanded="false" />
-            <element signature="e#479#480#0" expanded="false" />
-            <element signature="e#507#508#0" expanded="false" />
             <element signature="method#setPoint#0;class#Point#0" expanded="false" />
-            <element signature="e#919#920#0" expanded="false" />
-            <element signature="e#981#982#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -986,26 +936,20 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#buildLinkedPointsPair#0;class#Utils#0" expanded="false" />
-            <element signature="method#buildBigGraph#0;class#Utils#0" expanded="false" />
-            <element signature="method#buildFloorFromFile#0;class#Utils#0" expanded="false" />
             <element signature="method#buildFromFile#0;class#Utils#0" expanded="false" />
             <element signature="method#buildPoint#0;class#Utils#0" expanded="false" />
             <element signature="method#buildPoint#1;class#Utils#0" expanded="false" />
             <element signature="method#isEqual#0;class#Utils#0" expanded="false" />
             <element signature="method#print4J#0;class#Utils#0" expanded="false" />
-            <element signature="e#14246#14292#0" expanded="false" />
+            <element signature="e#14356#14402#0" expanded="false" />
             <element signature="method#hasErrorPoint#0;class#Utils#0" expanded="false" />
             <element signature="method#getResultWithinFloor#0;class#Utils#0" expanded="false" />
-            <element signature="method#getResultWithinFloor#1;class#Utils#0" expanded="false" />
-            <element signature="method#getResultWithinFloor#2;class#Utils#0" expanded="false" />
             <element signature="method#isSameOne#0;class#Utils#0" expanded="false" />
             <element signature="method#isSameOne#1;class#Utils#0" expanded="false" />
             <element signature="method#hasSameOne#0;class#Utils#0" expanded="false" />
             <element signature="method#hasSameOne#1;class#Utils#0" expanded="false" />
             <element signature="method#getSameOne#0;class#Utils#0" expanded="false" />
-            <element signature="method#hasSLE#0;class#Utils#0" expanded="false" />
             <element signature="method#getShortestEdges#0;class#Utils#0" expanded="false" />
-            <element signature="method#main#0;class#Utils#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1015,51 +959,9 @@
         <state relative-caret-position="0">
           <caret line="18" column="35" lean-forward="false" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="method#Floor#1;class#Floor#0" expanded="false" />
-            <element signature="e#1495#1496#0" expanded="false" />
-            <element signature="e#1527#1528#0" expanded="false" />
-            <element signature="e#1578#1579#0" expanded="false" />
-            <element signature="e#1620#1621#0" expanded="false" />
-            <element signature="e#1657#1658#0" expanded="false" />
-            <element signature="e#1690#1691#0" expanded="false" />
-            <element signature="e#1742#1743#0" expanded="false" />
-            <element signature="e#1786#1787#0" expanded="false" />
-            <element signature="e#1825#1826#0" expanded="false" />
-            <element signature="e#1853#1854#0" expanded="false" />
-            <element signature="e#1902#1903#0" expanded="false" />
-            <element signature="e#1936#1937#0" expanded="false" />
-            <element signature="e#1987#1988#0" expanded="false" />
-            <element signature="e#2023#2024#0" expanded="false" />
-            <element signature="e#2092#2093#0" expanded="false" />
-            <element signature="e#2142#2143#0" expanded="false" />
-            <element signature="e#2186#2187#0" expanded="false" />
-            <element signature="e#2215#2216#0" expanded="false" />
-            <element signature="e#2270#2271#0" expanded="false" />
-            <element signature="e#2306#2307#0" expanded="false" />
-            <element signature="e#2349#2350#0" expanded="false" />
-            <element signature="e#2377#2378#0" expanded="false" />
-            <element signature="e#2430#2431#0" expanded="false" />
-            <element signature="e#2464#2465#0" expanded="false" />
-            <element signature="e#2512#2513#0" expanded="false" />
-            <element signature="e#2545#2546#0" expanded="false" />
-            <element signature="e#2608#2609#0" expanded="false" />
-            <element signature="e#2652#2653#0" expanded="false" />
-            <element signature="e#2709#2710#0" expanded="false" />
-            <element signature="e#2744#2745#0" expanded="false" />
-            <element signature="e#2818#2819#0" expanded="false" />
-            <element signature="e#2866#2867#0" expanded="false" />
-            <element signature="e#3196#3197#0" expanded="false" />
-            <element signature="e#3240#3241#0" expanded="false" />
-            <element signature="e#3292#3293#0" expanded="false" />
-            <element signature="e#3328#3329#0" expanded="false" />
-            <element signature="e#3398#3399#0" expanded="false" />
-            <element signature="e#3448#3449#0" expanded="false" />
-            <element signature="e#3494#3495#0" expanded="false" />
-            <element signature="e#3526#3527#0" expanded="false" />
-            <element signature="e#3586#3587#0" expanded="false" />
-            <element signature="e#3628#3629#0" expanded="false" />
+            <element signature="method#getAll_points#0;class#Floor#0" expanded="false" />
             <element signature="method#describeFloor#0;class#Floor#0" expanded="false" />
+            <element signature="method#printPointsPairs#0;class#Floor#0" expanded="false" />
             <element signature="method#getLiftPoints#0;class#Floor#0" expanded="false" />
             <element signature="method#getStairPoints#0;class#Floor#0" expanded="false" />
             <element signature="method#getEscalatorPoints#0;class#Floor#0" expanded="false" />
@@ -1072,7 +974,7 @@
         <state relative-caret-position="0">
           <caret line="11" column="58" lean-forward="false" selection-start-line="11" selection-start-column="58" selection-end-line="11" selection-end-column="58" />
           <folding>
-            <element signature="method#minVertex#0;class#Dijkstra#0" expanded="false" />
+            <element signature="method#printPath#0;class#Dijkstra#0" expanded="false" />
             <element signature="method#getResultTuple#0;class#Dijkstra#0" expanded="false" />
           </folding>
         </state>
@@ -1090,7 +992,6 @@
             <element signature="method#GetFirst#0;class#WeightedGraph#0" expanded="false" />
             <element signature="method#GetNext#0;class#WeightedGraph#0" expanded="false" />
             <element signature="method#DFSVGraph#0;class#WeightedGraph#0" expanded="false" />
-            <element signature="method#isConnected#0;class#WeightedGraph#0" expanded="false" />
             <element signature="method#pathDistance#0;class#WeightedGraph#0" expanded="false" />
           </folding>
         </state>
@@ -1105,6 +1006,7 @@
             <element signature="method#stair_climbing#0;class#Main#0" expanded="false" />
             <element signature="method#lift_climbing#0;class#Main#0" expanded="false" />
             <element signature="method#escalator_climbing#0;class#Main#0" expanded="false" />
+            <marker date="1500106628569" expanded="false" signature="1457:4244" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1121,15 +1023,7 @@
         <state relative-caret-position="0">
           <caret line="17" column="5" lean-forward="false" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
           <folding>
-            <element signature="e#341#342#0" expanded="false" />
-            <element signature="e#369#370#0" expanded="false" />
-            <element signature="e#411#412#0" expanded="false" />
-            <element signature="e#445#446#0" expanded="false" />
-            <element signature="e#479#480#0" expanded="false" />
-            <element signature="e#507#508#0" expanded="false" />
             <element signature="method#setPoint#0;class#Point#0" expanded="false" />
-            <element signature="e#919#920#0" expanded="false" />
-            <element signature="e#981#982#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1139,7 +1033,7 @@
         <state relative-caret-position="0">
           <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding>
-            <element signature="method#minVertex#0;class#Dijkstra#0" expanded="false" />
+            <element signature="method#printPath#0;class#Dijkstra#0" expanded="false" />
             <element signature="method#getResultTuple#0;class#Dijkstra#0" expanded="false" />
           </folding>
         </state>
@@ -1157,7 +1051,6 @@
             <element signature="method#GetFirst#0;class#WeightedGraph#0" expanded="false" />
             <element signature="method#GetNext#0;class#WeightedGraph#0" expanded="false" />
             <element signature="method#DFSVGraph#0;class#WeightedGraph#0" expanded="false" />
-            <element signature="method#isConnected#0;class#WeightedGraph#0" expanded="false" />
             <element signature="method#pathDistance#0;class#WeightedGraph#0" expanded="false" />
           </folding>
         </state>
@@ -1172,6 +1065,7 @@
             <element signature="method#stair_climbing#0;class#Main#0" expanded="false" />
             <element signature="method#lift_climbing#0;class#Main#0" expanded="false" />
             <element signature="method#escalator_climbing#0;class#Main#0" expanded="false" />
+            <marker date="1500106628569" expanded="false" signature="1457:4244" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1202,7 +1096,7 @@
         <state relative-caret-position="0">
           <caret line="44" column="17" lean-forward="false" selection-start-line="44" selection-start-column="17" selection-end-line="44" selection-end-column="17" />
           <folding>
-            <element signature="method#minVertex#0;class#Dijkstra#0" expanded="false" />
+            <element signature="method#printPath#0;class#Dijkstra#0" expanded="false" />
             <element signature="method#getResultTuple#0;class#Dijkstra#0" expanded="false" />
           </folding>
         </state>
@@ -1220,7 +1114,6 @@
             <element signature="method#GetFirst#0;class#WeightedGraph#0" expanded="false" />
             <element signature="method#GetNext#0;class#WeightedGraph#0" expanded="false" />
             <element signature="method#DFSVGraph#0;class#WeightedGraph#0" expanded="false" />
-            <element signature="method#isConnected#0;class#WeightedGraph#0" expanded="false" />
             <element signature="method#pathDistance#0;class#WeightedGraph#0" expanded="false" />
           </folding>
         </state>
@@ -1238,51 +1131,9 @@
         <state relative-caret-position="0">
           <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="method#Floor#1;class#Floor#0" expanded="false" />
-            <element signature="e#1495#1496#0" expanded="false" />
-            <element signature="e#1527#1528#0" expanded="false" />
-            <element signature="e#1578#1579#0" expanded="false" />
-            <element signature="e#1620#1621#0" expanded="false" />
-            <element signature="e#1657#1658#0" expanded="false" />
-            <element signature="e#1690#1691#0" expanded="false" />
-            <element signature="e#1742#1743#0" expanded="false" />
-            <element signature="e#1786#1787#0" expanded="false" />
-            <element signature="e#1825#1826#0" expanded="false" />
-            <element signature="e#1853#1854#0" expanded="false" />
-            <element signature="e#1902#1903#0" expanded="false" />
-            <element signature="e#1936#1937#0" expanded="false" />
-            <element signature="e#1987#1988#0" expanded="false" />
-            <element signature="e#2023#2024#0" expanded="false" />
-            <element signature="e#2092#2093#0" expanded="false" />
-            <element signature="e#2142#2143#0" expanded="false" />
-            <element signature="e#2186#2187#0" expanded="false" />
-            <element signature="e#2215#2216#0" expanded="false" />
-            <element signature="e#2270#2271#0" expanded="false" />
-            <element signature="e#2306#2307#0" expanded="false" />
-            <element signature="e#2349#2350#0" expanded="false" />
-            <element signature="e#2377#2378#0" expanded="false" />
-            <element signature="e#2430#2431#0" expanded="false" />
-            <element signature="e#2464#2465#0" expanded="false" />
-            <element signature="e#2512#2513#0" expanded="false" />
-            <element signature="e#2545#2546#0" expanded="false" />
-            <element signature="e#2608#2609#0" expanded="false" />
-            <element signature="e#2652#2653#0" expanded="false" />
-            <element signature="e#2709#2710#0" expanded="false" />
-            <element signature="e#2744#2745#0" expanded="false" />
-            <element signature="e#2818#2819#0" expanded="false" />
-            <element signature="e#2866#2867#0" expanded="false" />
-            <element signature="e#3196#3197#0" expanded="false" />
-            <element signature="e#3240#3241#0" expanded="false" />
-            <element signature="e#3292#3293#0" expanded="false" />
-            <element signature="e#3328#3329#0" expanded="false" />
-            <element signature="e#3398#3399#0" expanded="false" />
-            <element signature="e#3448#3449#0" expanded="false" />
-            <element signature="e#3494#3495#0" expanded="false" />
-            <element signature="e#3526#3527#0" expanded="false" />
-            <element signature="e#3586#3587#0" expanded="false" />
-            <element signature="e#3628#3629#0" expanded="false" />
+            <element signature="method#getAll_points#0;class#Floor#0" expanded="false" />
             <element signature="method#describeFloor#0;class#Floor#0" expanded="false" />
+            <element signature="method#printPointsPairs#0;class#Floor#0" expanded="false" />
             <element signature="method#getLiftPoints#0;class#Floor#0" expanded="false" />
             <element signature="method#getStairPoints#0;class#Floor#0" expanded="false" />
             <element signature="method#getEscalatorPoints#0;class#Floor#0" expanded="false" />
@@ -1299,6 +1150,7 @@
             <element signature="method#stair_climbing#0;class#Main#0" expanded="false" />
             <element signature="method#lift_climbing#0;class#Main#0" expanded="false" />
             <element signature="method#escalator_climbing#0;class#Main#0" expanded="false" />
+            <marker date="1500106628569" expanded="false" signature="1457:4244" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1319,6 +1171,7 @@
             <element signature="method#stair_climbing#0;class#Main#0" expanded="false" />
             <element signature="method#lift_climbing#0;class#Main#0" expanded="false" />
             <element signature="method#escalator_climbing#0;class#Main#0" expanded="false" />
+            <marker date="1500106628569" expanded="false" signature="1457:4244" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1339,6 +1192,7 @@
             <element signature="method#stair_climbing#0;class#Main#0" expanded="false" />
             <element signature="method#lift_climbing#0;class#Main#0" expanded="false" />
             <element signature="method#escalator_climbing#0;class#Main#0" expanded="false" />
+            <marker date="1500106628569" expanded="false" signature="1457:4244" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1393,35 +1247,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/data/test_points2">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="4" column="26" lean-forward="false" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/data/test_points1">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="9" column="25" lean-forward="false" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/Point.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding>
-            <element signature="e#341#342#0" expanded="false" />
-            <element signature="e#369#370#0" expanded="false" />
-            <element signature="e#411#412#0" expanded="false" />
-            <element signature="e#445#446#0" expanded="false" />
-            <element signature="e#479#480#0" expanded="false" />
-            <element signature="e#507#508#0" expanded="false" />
-            <element signature="method#setPoint#0;class#Point#0" expanded="false" />
-            <element signature="e#919#920#0" expanded="false" />
-            <element signature="e#981#982#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1478,74 +1307,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/Floor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="192" column="0" lean-forward="false" selection-start-line="192" selection-start-column="0" selection-end-line="192" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="method#Floor#1;class#Floor#0" expanded="false" />
-            <element signature="e#1495#1496#0" expanded="false" />
-            <element signature="e#1527#1528#0" expanded="false" />
-            <element signature="e#1578#1579#0" expanded="false" />
-            <element signature="e#1620#1621#0" expanded="false" />
-            <element signature="e#1657#1658#0" expanded="false" />
-            <element signature="e#1690#1691#0" expanded="false" />
-            <element signature="e#1742#1743#0" expanded="false" />
-            <element signature="e#1786#1787#0" expanded="false" />
-            <element signature="e#1825#1826#0" expanded="false" />
-            <element signature="e#1853#1854#0" expanded="false" />
-            <element signature="e#1902#1903#0" expanded="false" />
-            <element signature="e#1936#1937#0" expanded="false" />
-            <element signature="e#1987#1988#0" expanded="false" />
-            <element signature="e#2023#2024#0" expanded="false" />
-            <element signature="e#2092#2093#0" expanded="false" />
-            <element signature="e#2142#2143#0" expanded="false" />
-            <element signature="e#2186#2187#0" expanded="false" />
-            <element signature="e#2215#2216#0" expanded="false" />
-            <element signature="e#2270#2271#0" expanded="false" />
-            <element signature="e#2306#2307#0" expanded="false" />
-            <element signature="e#2349#2350#0" expanded="false" />
-            <element signature="e#2377#2378#0" expanded="false" />
-            <element signature="e#2430#2431#0" expanded="false" />
-            <element signature="e#2464#2465#0" expanded="false" />
-            <element signature="e#2512#2513#0" expanded="false" />
-            <element signature="e#2545#2546#0" expanded="false" />
-            <element signature="e#2608#2609#0" expanded="false" />
-            <element signature="e#2652#2653#0" expanded="false" />
-            <element signature="e#2709#2710#0" expanded="false" />
-            <element signature="e#2744#2745#0" expanded="false" />
-            <element signature="e#2818#2819#0" expanded="false" />
-            <element signature="e#2866#2867#0" expanded="false" />
-            <element signature="e#3196#3197#0" expanded="false" />
-            <element signature="e#3240#3241#0" expanded="false" />
-            <element signature="e#3292#3293#0" expanded="false" />
-            <element signature="e#3328#3329#0" expanded="false" />
-            <element signature="e#3398#3399#0" expanded="false" />
-            <element signature="e#3448#3449#0" expanded="false" />
-            <element signature="e#3494#3495#0" expanded="false" />
-            <element signature="e#3526#3527#0" expanded="false" />
-            <element signature="e#3586#3587#0" expanded="false" />
-            <element signature="e#3628#3629#0" expanded="false" />
-            <element signature="method#describeFloor#0;class#Floor#0" expanded="false" />
-            <element signature="method#getLiftPoints#0;class#Floor#0" expanded="false" />
-            <element signature="method#getStairPoints#0;class#Floor#0" expanded="false" />
-            <element signature="method#getEscalatorPoints#0;class#Floor#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/Dijkstra.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="method#minVertex#0;class#Dijkstra#0" expanded="false" />
-            <element signature="method#getResultTuple#0;class#Dijkstra#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/compiler.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="16">
@@ -1554,10 +1315,87 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/WeightedGraph.java">
+    <entry file="file://$PROJECT_DIR$/src/data/test_points2">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="10" column="2" lean-forward="true" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data/test_points3">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="8" column="25" lean-forward="true" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/Dijkstra.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="91" column="5" lean-forward="true" selection-start-line="91" selection-start-column="5" selection-end-line="91" selection-end-column="5" />
+          <folding>
+            <element signature="method#printPath#0;class#Dijkstra#0" expanded="false" />
+            <element signature="method#getResultTuple#0;class#Dijkstra#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="210" column="22" lean-forward="false" selection-start-line="210" selection-start-column="22" selection-end-line="210" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#buildLinkedPointsPair#0;class#Utils#0" expanded="false" />
+            <element signature="method#buildFromFile#0;class#Utils#0" expanded="false" />
+            <element signature="method#buildPoint#0;class#Utils#0" expanded="false" />
+            <element signature="method#buildPoint#1;class#Utils#0" expanded="false" />
+            <element signature="method#isEqual#0;class#Utils#0" expanded="false" />
+            <element signature="method#print4J#0;class#Utils#0" expanded="false" />
+            <element signature="e#14356#14402#0" expanded="false" />
+            <element signature="method#hasErrorPoint#0;class#Utils#0" expanded="false" />
+            <element signature="method#getResultWithinFloor#0;class#Utils#0" expanded="false" />
+            <element signature="method#isSameOne#0;class#Utils#0" expanded="false" />
+            <element signature="method#isSameOne#1;class#Utils#0" expanded="false" />
+            <element signature="method#hasSameOne#0;class#Utils#0" expanded="false" />
+            <element signature="method#hasSameOne#1;class#Utils#0" expanded="false" />
+            <element signature="method#getSameOne#0;class#Utils#0" expanded="false" />
+            <element signature="method#getShortestEdges#0;class#Utils#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/Point.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="78">
-          <caret line="15" column="49" lean-forward="true" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding>
+            <element signature="method#setPoint#0;class#Point#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/Floor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="23" column="45" lean-forward="false" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
+          <folding>
+            <element signature="method#getAll_points#0;class#Floor#0" expanded="false" />
+            <element signature="method#describeFloor#0;class#Floor#0" expanded="false" />
+            <element signature="method#printPointsPairs#0;class#Floor#0" expanded="false" />
+            <element signature="method#getLiftPoints#0;class#Floor#0" expanded="false" />
+            <element signature="method#getStairPoints#0;class#Floor#0" expanded="false" />
+            <element signature="method#getEscalatorPoints#0;class#Floor#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/WeightedGraph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="154" column="0" lean-forward="false" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
           <folding>
             <element signature="method#myFill#0;class#WeightedGraph#0" expanded="false" />
             <element signature="method#neighbors_directed#0;class#WeightedGraph#0" expanded="false" />
@@ -1566,60 +1404,21 @@
             <element signature="method#GetFirst#0;class#WeightedGraph#0" expanded="false" />
             <element signature="method#GetNext#0;class#WeightedGraph#0" expanded="false" />
             <element signature="method#DFSVGraph#0;class#WeightedGraph#0" expanded="false" />
-            <element signature="method#isConnected#0;class#WeightedGraph#0" expanded="false" />
             <element signature="method#pathDistance#0;class#WeightedGraph#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/data/test_points3">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="8" column="25" lean-forward="false" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/Utils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1311">
-          <caret line="213" column="6" lean-forward="true" selection-start-line="213" selection-start-column="6" selection-end-line="213" selection-end-column="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#buildLinkedPointsPair#0;class#Utils#0" expanded="false" />
-            <element signature="method#buildBigGraph#0;class#Utils#0" expanded="false" />
-            <element signature="method#buildFloorFromFile#0;class#Utils#0" expanded="false" />
-            <element signature="method#buildFromFile#0;class#Utils#0" expanded="false" />
-            <element signature="method#buildPoint#0;class#Utils#0" expanded="false" />
-            <element signature="method#buildPoint#1;class#Utils#0" expanded="false" />
-            <element signature="method#isEqual#0;class#Utils#0" expanded="false" />
-            <element signature="method#print4J#0;class#Utils#0" expanded="false" />
-            <element signature="e#14246#14292#0" expanded="false" />
-            <element signature="method#hasErrorPoint#0;class#Utils#0" expanded="false" />
-            <element signature="method#getResultWithinFloor#0;class#Utils#0" expanded="false" />
-            <element signature="method#getResultWithinFloor#1;class#Utils#0" expanded="false" />
-            <element signature="method#getResultWithinFloor#2;class#Utils#0" expanded="false" />
-            <element signature="method#isSameOne#0;class#Utils#0" expanded="false" />
-            <element signature="method#isSameOne#1;class#Utils#0" expanded="false" />
-            <element signature="method#hasSameOne#0;class#Utils#0" expanded="false" />
-            <element signature="method#hasSameOne#1;class#Utils#0" expanded="false" />
-            <element signature="method#getSameOne#0;class#Utils#0" expanded="false" />
-            <element signature="method#hasSLE#0;class#Utils#0" expanded="false" />
-            <element signature="method#getShortestEdges#0;class#Utils#0" expanded="false" />
-            <element signature="method#main#0;class#Utils#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+        <state relative-caret-position="-49">
+          <caret line="253" column="42" lean-forward="true" selection-start-line="253" selection-start-column="42" selection-end-line="253" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#stair_climbing#0;class#Main#0" expanded="false" />
             <element signature="method#lift_climbing#0;class#Main#0" expanded="false" />
             <element signature="method#escalator_climbing#0;class#Main#0" expanded="false" />
+            <marker date="1500106628569" expanded="false" signature="1457:4244" ph="{...}" />
           </folding>
         </state>
       </provider>

@@ -149,14 +149,18 @@ public class WeightedGraph {
 
      /*判断图是不是连通图，只有连通图才能用Dijkstra来求最短路径*/
      public boolean isConnected(){
+         boolean isCon = true;
+         ArrayList<Object> isolatedPoints = new ArrayList<>();
          int[] visit = this.DFSVGraph(0, new int[this.vexs]);
-         System.out.println(Arrays.toString(visit));
-         for(int v:visit){
-             if (v==0){
-                 return false;
+         for(int i=0;i<visit.length;i++){
+             if (visit[i]==0){
+                 isCon = false;
+                 isolatedPoints.add(this.labels[i]);
              }
          }
-         return true;
+         //print isolated points
+         System.out.println(isolatedPoints);
+         return isCon;
      }
 
 /*give a path,and get the distance form the first node to the last node*/
