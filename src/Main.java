@@ -21,8 +21,8 @@ public class Main {
     public static void climbing(ArrayList<Floor> floors, Floor start_floor, String start_point,
                                 Floor end_floor,String end_point){
         WeightedGraph t = buildBigGraph(floors);
-        int start_point_id = point_id_map.get(start_floor.getFloor_name()+"_"+start_point);
-        int end_point_id = point_id_map.get(end_floor.getFloor_name()+"_"+end_point);
+        int start_point_id = allFloor_point_id_map.get(start_floor.getFloor_name()+"_"+start_point);
+        int end_point_id = allFloor_point_id_map.get(end_floor.getFloor_name()+"_"+end_point);
         final int[] pred = Dijkstra.dijkstra(t, start_point_id);
         Dijkstra.printPath(t, pred, start_point_id, end_point_id);
     }

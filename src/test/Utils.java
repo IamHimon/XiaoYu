@@ -15,7 +15,8 @@ import java.util.regex.Pattern;
 public class Utils {
     //相邻两层之间的对应的两个点
     public static ArrayList<Point[]> LinkedPointsPair = new ArrayList<>();
-    public  static HashMap<String, Integer> point_id_map = new HashMap<>();
+    /*所有层点的id_map*/
+    public  static HashMap<String, Integer> allFloor_point_id_map = new HashMap<>();
 
     //构造LinkedPointsPair
     public static void buildLinkedPointsPair(ArrayList<Floor> floors) {
@@ -41,8 +42,6 @@ public class Utils {
                     }
                 }
             }
-
-
         }
     }
 
@@ -62,20 +61,20 @@ public class Utils {
 //        allPointsPair.addAll(LinkedPointsPair);
         //
         for (int i=0;i<allPoints.size();i++){
-            point_id_map.put(allPoints.get(i).getLabel(), i);
+            allFloor_point_id_map.put(allPoints.get(i).getLabel(), i);
         }
 
         System.out.println(allPoints.size());
-        print4J(point_id_map);
+        print4J(allFloor_point_id_map);
 
-        WeightedGraph t = new WeightedGraph(point_id_map.size());
-        for (Object obj:point_id_map.keySet()){
-            t.setLabel(point_id_map.get(obj), obj);
+        WeightedGraph t = new WeightedGraph(allFloor_point_id_map.size());
+        for (Object obj:allFloor_point_id_map.keySet()){
+            t.setLabel(allFloor_point_id_map.get(obj), obj);
         }
 
         for (int i = 0; i<allPointsPair.size();i++){
-            int source = point_id_map.get(allPointsPair.get(i)[0].getLabel());
-            int target = point_id_map.get(allPointsPair.get(i)[1].getLabel());
+            int source = allFloor_point_id_map.get(allPointsPair.get(i)[0].getLabel());
+            int target = allFloor_point_id_map.get(allPointsPair.get(i)[1].getLabel());
             Double weight = distanceBetweenTwoPoints(allPointsPair.get(i)[0], allPointsPair.get(i)[1]);
 
             t.addEdge(source, target, weight);
@@ -84,8 +83,8 @@ public class Utils {
         }
         //层间点单独构建
         for (int i = 0; i<LinkedPointsPair.size();i++){
-            int source = point_id_map.get(LinkedPointsPair.get(i)[0].getLabel());
-            int target = point_id_map.get(LinkedPointsPair.get(i)[1].getLabel());
+            int source = allFloor_point_id_map.get(LinkedPointsPair.get(i)[0].getLabel());
+            int target = allFloor_point_id_map.get(LinkedPointsPair.get(i)[1].getLabel());
 
             t.addEdge(source, target, shortestEdges/2);
             // 无向图
