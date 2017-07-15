@@ -254,7 +254,7 @@ public class Main {
         String filename5l = "src/data/5楼";
 //        Floor floor1 = buildFloorFromFile(3,"floor3", filename3l);
 //        Floor floor2 = buildFloorFromFile(4,"floor4", filename4l);
-        Floor floor3 = buildFloorFromFile(5,"floor5", filename5l);
+//        Floor floor3 = buildFloorFromFile(5,"floor5", filename5l);
 //        floor3l.describeFloor();
 //        floor4l.describeFloor();
 //        floor5l.describeFloor();
@@ -262,11 +262,11 @@ public class Main {
 //        String filename5 = "src/data/5楼";
 
         //按顺序添加floor,测试数据
-//        Floor floor1 = buildFloorFromFile(1, "floor1", filename1);
-//        Floor floor2 = buildFloorFromFile(2, "floor2", filename2);
-//        Floor floor3 = buildFloorFromFile(3, "floor3", filename3);
+        Floor floor1 = buildFloorFromFile(1, "floor1", filename1);
+        Floor floor2 = buildFloorFromFile(2, "floor2", filename2);
+        Floor floor3 = buildFloorFromFile(3, "floor3", filename3);
 
-      /*  ArrayList<Floor> floors = new ArrayList<>();
+        ArrayList<Floor> floors = new ArrayList<>();
         floors.add(floor1);
         floors.add(floor2);
         floors.add(floor3);
@@ -281,7 +281,6 @@ public class Main {
         System.out.println("lift path:" + lift_path);
         System.out.println("escalator path:" + escalator_path);
 
-*/
 
     }
 

@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0dc4e9a1-2421-4e75-96da-1cf64eee34a9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/XiaoYu/Main.class" afterPath="$PROJECT_DIR$/out/production/XiaoYu/Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/Floor.java" afterPath="$PROJECT_DIR$/src/test/Floor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/Utils.java" afterPath="$PROJECT_DIR$/src/test/Utils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/WeightedGraph.java" afterPath="$PROJECT_DIR$/src/test/WeightedGraph.java" />
     </list>
     <ignored path="XiaoYu.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,14 +28,14 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-49">
-              <caret line="253" column="42" lean-forward="true" selection-start-line="253" selection-start-column="42" selection-end-line="253" selection-end-column="42" />
+            <state relative-caret-position="55">
+              <caret line="261" column="43" lean-forward="true" selection-start-line="261" selection-start-column="43" selection-end-line="261" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#stair_climbing#0;class#Main#0" expanded="false" />
                 <element signature="method#lift_climbing#0;class#Main#0" expanded="false" />
                 <element signature="method#escalator_climbing#0;class#Main#0" expanded="false" />
-                <marker date="1500106628569" expanded="false" signature="1457:4244" ph="{...}" />
+                <marker date="1500106914458" expanded="false" signature="1457:4244" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -735,7 +731,14 @@
       <option name="project" value="LOCAL" />
       <updated>1500098493357</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Starbucks coding">
+      <created>1500106831455</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1500106831455</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -763,7 +766,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41967213" sideWeight="0.50907713" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29836065" sideWeight="0.48789713" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4409836" sideWeight="0.48789713" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295082" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295082" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1006,7 +1009,7 @@
             <element signature="method#stair_climbing#0;class#Main#0" expanded="false" />
             <element signature="method#lift_climbing#0;class#Main#0" expanded="false" />
             <element signature="method#escalator_climbing#0;class#Main#0" expanded="false" />
-            <marker date="1500106628569" expanded="false" signature="1457:4244" ph="{...}" />
+            <marker date="1500106914458" expanded="false" signature="1457:4244" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1065,7 +1068,7 @@
             <element signature="method#stair_climbing#0;class#Main#0" expanded="false" />
             <element signature="method#lift_climbing#0;class#Main#0" expanded="false" />
             <element signature="method#escalator_climbing#0;class#Main#0" expanded="false" />
-            <marker date="1500106628569" expanded="false" signature="1457:4244" ph="{...}" />
+            <marker date="1500106914458" expanded="false" signature="1457:4244" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1150,7 +1153,7 @@
             <element signature="method#stair_climbing#0;class#Main#0" expanded="false" />
             <element signature="method#lift_climbing#0;class#Main#0" expanded="false" />
             <element signature="method#escalator_climbing#0;class#Main#0" expanded="false" />
-            <marker date="1500106628569" expanded="false" signature="1457:4244" ph="{...}" />
+            <marker date="1500106914458" expanded="false" signature="1457:4244" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1171,7 +1174,7 @@
             <element signature="method#stair_climbing#0;class#Main#0" expanded="false" />
             <element signature="method#lift_climbing#0;class#Main#0" expanded="false" />
             <element signature="method#escalator_climbing#0;class#Main#0" expanded="false" />
-            <marker date="1500106628569" expanded="false" signature="1457:4244" ph="{...}" />
+            <marker date="1500106914458" expanded="false" signature="1457:4244" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1192,7 +1195,7 @@
             <element signature="method#stair_climbing#0;class#Main#0" expanded="false" />
             <element signature="method#lift_climbing#0;class#Main#0" expanded="false" />
             <element signature="method#escalator_climbing#0;class#Main#0" expanded="false" />
-            <marker date="1500106628569" expanded="false" signature="1457:4244" ph="{...}" />
+            <marker date="1500106914458" expanded="false" signature="1457:4244" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1411,14 +1414,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-49">
-          <caret line="253" column="42" lean-forward="true" selection-start-line="253" selection-start-column="42" selection-end-line="253" selection-end-column="42" />
+        <state relative-caret-position="55">
+          <caret line="261" column="43" lean-forward="true" selection-start-line="261" selection-start-column="43" selection-end-line="261" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#stair_climbing#0;class#Main#0" expanded="false" />
             <element signature="method#lift_climbing#0;class#Main#0" expanded="false" />
             <element signature="method#escalator_climbing#0;class#Main#0" expanded="false" />
-            <marker date="1500106628569" expanded="false" signature="1457:4244" ph="{...}" />
+            <marker date="1500106914458" expanded="false" signature="1457:4244" ph="{...}" />
           </folding>
         </state>
       </provider>
