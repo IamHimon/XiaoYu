@@ -271,12 +271,12 @@ public class Main {
 
 
     public static void main(String[] args) throws Exception {
-        String filename1 = "src/data/test_points1";
-        String filename2 = "src/data/test_points2";
-        String filename3 = "src/data/test_points3";
-        String filename3l = "src/data/3楼";
-        String filename4l = "src/data/4楼";
-        String filename5l = "src/data/5楼";
+//        String filename1 = "src/data/test_points1";
+//        String filename2 = "src/data/test_points2";
+//        String filename3 = "src/data/test_points3";
+        String filename1 = "src/data/3.1.txt";
+        String filename2 = "src/data/4.1.txt";
+        String filename3 = "src/data/5.1.txt";
 //        Floor floor3l = buildFloorFromFile("floor_3l", filename3l);
 //        Floor floor4l = buildFloorFromFile("floor_4l", filename4l);
 //        Floor floor5l = buildFloorFromFile("floor_5l", filename5l);
@@ -287,21 +287,10 @@ public class Main {
 //        String filename5 = "src/data/5楼";
 
         //按顺序添加floor
-//一层
 
         Floor floor1 = buildFloorFromFile(1, "floor1", filename1);
-//        floor1.printPointsPairs();
-//        System.out.println(floor1.getAll_points());
-//        System.out.println(floor1.getLiftPoints());
-
-
-
-//二层
 
         Floor floor2 = buildFloorFromFile(2, "floor2", filename2);
-//        floor2.printPointsPairs();
-
-//三层
 
         Floor floor3 = buildFloorFromFile(3, "floor3", filename3);
 
@@ -314,10 +303,7 @@ public class Main {
 
         final int[] pred = Dijkstra.dijkstra(t, 0);
 
-        Dijkstra.printPath(t, pred, 0, 29);
-
-
-
+        Dijkstra.printPath(t, pred, 0, 187);
 
 //
 //        Double shortestEdges = getShortestEdges(floors);
