@@ -1,0 +1,3 @@
+当按照电梯爬，某层找到的nearest_stair通不到最上面，就是在上面一层没有the one stair，
+将graph构造成一个只有stair的大图！一切从简。
+这样，如果某一层没有stair，就不能构成通图，报错。

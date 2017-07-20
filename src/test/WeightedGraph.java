@@ -1,6 +1,7 @@
 package test;
 
 import com.sun.corba.se.impl.orbutil.graph.Graph;
+import com.sun.org.apache.bcel.internal.generic.IF_ACMPEQ;
 import sun.security.provider.certpath.Vertex;
 
 import javax.management.ObjectName;
@@ -152,6 +153,7 @@ public class WeightedGraph {
          boolean isCon = true;
          ArrayList<Object> isolatedPoints = new ArrayList<>();
          int[] visit = this.DFSVGraph(0, new int[this.vexs]);
+//         System.out.println(Arrays.toString(visit));
          for(int i=0;i<visit.length;i++){
              if (visit[i]==0){
                  isCon = false;
@@ -159,7 +161,9 @@ public class WeightedGraph {
              }
          }
          //print isolated points
-         System.out.println(isolatedPoints);
+         if (!isolatedPoints.isEmpty())
+            System.out.println(isolatedPoints);
+
          return isCon;
      }
 
