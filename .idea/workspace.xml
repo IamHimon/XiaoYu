@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0dc4e9a1-2421-4e75-96da-1cf64eee34a9" name="Default" comment="">
+    <list default="true" id="0dc4e9a1-2421-4e75-96da-1cf64eee34a9" name="Default" comment="sushe coding">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="XiaoYu.iws" />
@@ -28,10 +29,14 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.40920717">
-              <caret line="295" column="0" selection-start-line="295" selection-start-column="0" selection-end-line="295" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.27247956">
+              <caret line="194" column="33" selection-start-line="194" selection-start-column="33" selection-end-line="194" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#climbing#0;class#Main#0" expanded="false" />
+                <element signature="method#stair_climbing#0;class#Main#0" expanded="false" />
+                <element signature="method#lift_climbing#0;class#Main#0" expanded="false" />
+                <element signature="method#escalator_climbing#0;class#Main#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -41,7 +46,7 @@
         <entry file="file://$PROJECT_DIR$/src/test/Utils.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="150" column="0" selection-start-line="150" selection-start-column="0" selection-end-line="150" selection-end-column="0" />
+              <caret line="483" column="0" selection-start-line="483" selection-start-column="0" selection-end-line="483" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#buildFromFile#0;class#Utils#0" expanded="false" />
@@ -53,7 +58,6 @@
                 <element signature="method#hasErrorPoint#0;class#Utils#0" expanded="false" />
                 <element signature="method#getResultWithinFloor#0;class#Utils#0" expanded="false" />
                 <element signature="method#getResultWithinFloor#1;class#Utils#0" expanded="false" />
-                <element signature="method#getResultWithinFloor#2;class#Utils#0" expanded="false" />
                 <element signature="method#hasSameOne#1;class#Utils#0" expanded="false" />
                 <element signature="method#getSameOne#0;class#Utils#0" expanded="false" />
                 <element signature="method#hasSLE#0;class#Utils#0" expanded="false" />
@@ -79,8 +83,12 @@
         <entry file="file://$PROJECT_DIR$/src/test/Floor.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="152" column="44" selection-start-line="152" selection-start-column="44" selection-end-line="152" selection-end-column="44" />
-              <folding />
+              <caret line="97" column="0" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
+              <folding>
+                <element signature="e#1675#1676#0" expanded="true" />
+                <element signature="e#1703#1704#0" expanded="true" />
+                <element signature="e#2594#2595#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -227,7 +235,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -303,6 +310,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -779,7 +787,8 @@
       <workItem from="1499906513480" duration="10288000" />
       <workItem from="1500009216796" duration="13233000" />
       <workItem from="1500079706167" duration="142000" />
-      <workItem from="1500467139201" duration="885000" />
+      <workItem from="1500467139201" duration="950000" />
+      <workItem from="1500511163727" duration="2237000" />
     </task>
     <task id="LOCAL-00001" summary="wujiang coded">
       <created>1499074632176</created>
@@ -841,11 +850,17 @@
       <option name="project" value="LOCAL" />
       <updated>1500467886019</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="sushe coding">
+      <created>1500468044617</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1500468044617</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60278000" />
+    <option name="totallyTimeSpent" value="62580000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -857,7 +872,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -868,16 +883,16 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3137255" sideWeight="0.48789713" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3529412" sideWeight="0.48789713" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295082" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17397882" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17397882" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3611111" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39052287" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -936,6 +951,7 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="false" />
     <MESSAGE value="wujiang coded" />
     <MESSAGE value="lab coding" />
     <MESSAGE value="wuj coding" />
@@ -946,7 +962,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="19" />
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <option name="time" value="21" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -970,7 +989,6 @@
             <element signature="method#hasErrorPoint#0;class#Utils#0" expanded="false" />
             <element signature="method#getResultWithinFloor#0;class#Utils#0" expanded="false" />
             <element signature="method#getResultWithinFloor#1;class#Utils#0" expanded="false" />
-            <element signature="method#getResultWithinFloor#2;class#Utils#0" expanded="false" />
             <element signature="method#hasSameOne#1;class#Utils#0" expanded="false" />
             <element signature="method#getSameOne#0;class#Utils#0" expanded="false" />
             <element signature="method#hasSLE#0;class#Utils#0" expanded="false" />
@@ -993,7 +1011,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#1675#1676#0" expanded="true" />
+            <element signature="e#1703#1704#0" expanded="true" />
+            <element signature="e#2594#2595#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1052,7 +1074,6 @@
             <element signature="method#hasErrorPoint#0;class#Utils#0" expanded="false" />
             <element signature="method#getResultWithinFloor#0;class#Utils#0" expanded="false" />
             <element signature="method#getResultWithinFloor#1;class#Utils#0" expanded="false" />
-            <element signature="method#getResultWithinFloor#2;class#Utils#0" expanded="false" />
             <element signature="method#hasSameOne#1;class#Utils#0" expanded="false" />
             <element signature="method#getSameOne#0;class#Utils#0" expanded="false" />
             <element signature="method#hasSLE#0;class#Utils#0" expanded="false" />
@@ -1065,7 +1086,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
-          <folding />
+          <folding>
+            <element signature="e#1675#1676#0" expanded="true" />
+            <element signature="e#1703#1704#0" expanded="true" />
+            <element signature="e#2594#2595#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1105,6 +1130,10 @@
           <caret line="60" column="51" selection-start-line="60" selection-start-column="51" selection-end-line="60" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#climbing#0;class#Main#0" expanded="false" />
+            <element signature="method#stair_climbing#0;class#Main#0" expanded="false" />
+            <element signature="method#lift_climbing#0;class#Main#0" expanded="false" />
+            <element signature="method#escalator_climbing#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1162,6 +1191,10 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#climbing#0;class#Main#0" expanded="false" />
+            <element signature="method#stair_climbing#0;class#Main#0" expanded="false" />
+            <element signature="method#lift_climbing#0;class#Main#0" expanded="false" />
+            <element signature="method#escalator_climbing#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1228,7 +1261,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#1675#1676#0" expanded="true" />
+            <element signature="e#1703#1704#0" expanded="true" />
+            <element signature="e#2594#2595#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1238,6 +1275,10 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#climbing#0;class#Main#0" expanded="false" />
+            <element signature="method#stair_climbing#0;class#Main#0" expanded="false" />
+            <element signature="method#lift_climbing#0;class#Main#0" expanded="false" />
+            <element signature="method#escalator_climbing#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1255,6 +1296,10 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#climbing#0;class#Main#0" expanded="false" />
+            <element signature="method#stair_climbing#0;class#Main#0" expanded="false" />
+            <element signature="method#lift_climbing#0;class#Main#0" expanded="false" />
+            <element signature="method#escalator_climbing#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1272,6 +1317,10 @@
           <caret line="2" column="42" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#climbing#0;class#Main#0" expanded="false" />
+            <element signature="method#stair_climbing#0;class#Main#0" expanded="false" />
+            <element signature="method#lift_climbing#0;class#Main#0" expanded="false" />
+            <element signature="method#escalator_climbing#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1377,10 +1426,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/Floor.java">
+    <entry file="file://$PROJECT_DIR$/src/data/test_points3">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2739726">
+          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/Dijkstra.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="152" column="44" selection-start-line="152" selection-start-column="44" selection-end-line="152" selection-end-column="44" />
+          <caret line="88" column="33" selection-start-line="88" selection-start-column="33" selection-end-line="88" selection-end-column="33" />
+          <folding>
+            <element signature="method#dijkstra#0;class#Dijkstra#0" expanded="false" />
+            <element signature="method#minVertex#0;class#Dijkstra#0" expanded="false" />
+            <element signature="method#getResultTuple#0;class#Dijkstra#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data/5.1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.766666">
+          <caret line="39" column="41" selection-start-line="39" selection-start-column="40" selection-end-line="39" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/data/4.1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34900543">
+          <caret line="76" column="4" selection-start-line="76" selection-start-column="1" selection-end-line="76" selection-end-column="4" />
           <folding />
         </state>
       </provider>
@@ -1403,46 +1479,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/data/test_points3">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2739726">
-          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/Dijkstra.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="88" column="33" selection-start-line="88" selection-start-column="33" selection-end-line="88" selection-end-column="33" />
-          <folding>
-            <element signature="method#dijkstra#0;class#Dijkstra#0" expanded="false" />
-            <element signature="method#minVertex#0;class#Dijkstra#0" expanded="false" />
-            <element signature="method#getResultTuple#0;class#Dijkstra#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/data/3.1.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+        <state vertical-scroll-proportion="0.55414015">
+          <caret line="72" column="3" selection-start-line="72" selection-start-column="3" selection-end-line="72" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/data/5.1.txt">
+    <entry file="file://$PROJECT_DIR$/src/test/Floor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.16438356">
-          <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
-          <folding />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="97" column="0" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
+          <folding>
+            <element signature="e#1675#1676#0" expanded="true" />
+            <element signature="e#1703#1704#0" expanded="true" />
+            <element signature="e#2594#2595#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/Utils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="150" column="0" selection-start-line="150" selection-start-column="0" selection-end-line="150" selection-end-column="0" />
+          <caret line="483" column="0" selection-start-line="483" selection-start-column="0" selection-end-line="483" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#buildFromFile#0;class#Utils#0" expanded="false" />
@@ -1454,7 +1514,6 @@
             <element signature="method#hasErrorPoint#0;class#Utils#0" expanded="false" />
             <element signature="method#getResultWithinFloor#0;class#Utils#0" expanded="false" />
             <element signature="method#getResultWithinFloor#1;class#Utils#0" expanded="false" />
-            <element signature="method#getResultWithinFloor#2;class#Utils#0" expanded="false" />
             <element signature="method#hasSameOne#1;class#Utils#0" expanded="false" />
             <element signature="method#getSameOne#0;class#Utils#0" expanded="false" />
             <element signature="method#hasSLE#0;class#Utils#0" expanded="false" />
@@ -1463,20 +1522,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/data/4.1.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="44" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40920717">
-          <caret line="295" column="0" selection-start-line="295" selection-start-column="0" selection-end-line="295" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.27247956">
+          <caret line="194" column="33" selection-start-line="194" selection-start-column="33" selection-end-line="194" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#climbing#0;class#Main#0" expanded="false" />
+            <element signature="method#stair_climbing#0;class#Main#0" expanded="false" />
+            <element signature="method#lift_climbing#0;class#Main#0" expanded="false" />
+            <element signature="method#escalator_climbing#0;class#Main#0" expanded="false" />
           </folding>
         </state>
       </provider>

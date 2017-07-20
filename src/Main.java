@@ -145,6 +145,59 @@ public class Main {
         }
     }
 
+    public static void stair_climbing2(ArrayList<Floor> floors, String start_point, String end_point, boolean is_start_point){
+        ArrayList<Quartet<String, String, ArrayList<Object>,Double>> floor_result;
+        if (hasSLE(floors.get(0), "S")){
+            System.out.println("Can not arrived through stair,as "+ floors.get(0).getFloor_name() +" has no stair!");
+            return;
+        }
+        if (floors.size() == 1){
+            for (Object s:getResultWithinFloor(floors.get(0), start_point, end_point).getValue2()){
+                stair_path.add(s.toString());
+            }
+        }else {
+            stair_path.add(start_point);
+
+            if (start_point.contains("C")&&!hasSameOne(floors.get(0), start_point, is_start_point)){
+                floor_result = getResultWithinFloor(floors.get(0), start_point);
+                // 在起始楼找到与起始点最近的点
+                Quartet<String, String, ArrayList<Object>,Double> nearest_stair = Quartet.with("a", "b", new ArrayList<>('a'), Double.MAX_VALUE);
+                for (Quartet<String, String, ArrayList<Object>,Double> q:floor_result){
+                    // find the nearest Stair
+                    if (q.getValue1().startsWith("S")){
+                        if (q.getValue3() < nearest_stair.getValue3()){
+                            nearest_stair = q;
+                        }
+                    }
+                }
+
+                //起始层将点加入到path
+                if (is_start_point){
+                    for (int i=1;i<nearest_stair.getValue2().size()-1;i++){
+                        stair_path.add(nearest_stair.getValue2().get(i).toString());
+                    }
+                }
+
+                String start_point_in_next_floor = getSameOne(floors.get(1), nearest_stair.getValue1());
+                floors.remove(0);
+                System.out.println(start_point_in_next_floor);
+//                System.out.println(floors);
+                for (Floor f:floors)
+                    System.out.println(f.getFloor_name());
+
+                stair_climbing2(floors, start_point_in_next_floor,end_point,false);
+            }else {
+                String start_point_in_next_floor = getSameOne(floors.get(1), start_point);
+                System.out.println(start_point_in_next_floor);
+//                System.out.println(floors);
+                for (Floor f:floors)
+                    System.out.println(f.getFloor_name());
+                floors.remove(0);
+                stair_climbing2(floors, start_point_in_next_floor, end_point, false);
+            }
+        }
+    }
+
     public static void lift_climbing(ArrayList<Floor> floors, String start_point, String end_point, boolean is_start_point){
         ArrayList<Quartet<String, String, ArrayList<Object>,Double>> floor_result;
         if (hasSLE(floors.get(0), "L")){
@@ -235,7 +288,7 @@ public class Main {
 
                 for (Quartet<String, String, ArrayList<Object>,Double> q:floor_result){
                     // find the nearest Stair
-                    if(q.getValue1().startsWith("E")){
+                    if (q.getValue1().startsWith("E")){
                         if (q.getValue3() < nearest_escalator.getValue3()){
                             nearest_escalator = q;
                         }
@@ -299,22 +352,23 @@ public class Main {
         floors.add(floor2);
         floors.add(floor3);
 
-        WeightedGraph t = buildBigGraph(floors);
-
-        final int[] pred = Dijkstra.dijkstra(t, 0);
-
-        Dijkstra.printPath(t, pred, 0, 187);
-
+//        WeightedGraph t = buildBigGraph(floors);
+//        print4J(allFloor_point_id_map);
 //
-//        Double shortestEdges = getShortestEdges(floors);
-//        System.out.println(shortestEdges);
+//        final int[] pred = Dijkstra.dijkstra(t, 0);
+//
+//        Dijkstra.printPath(t, pred, 0, 187);
 
 
-//        stair_climbing((ArrayList<Floor>) floors.clone(), "C1", "C3", true);
-//        lift_climbing((ArrayList<Floor>) floors.clone(), "C1", "C3", true);
-//        escalator_climbing((ArrayList<Floor>) floors.clone(), "C1", "C3", true);
+        print4J(floor1.getPoint_id_map());
+//        print4J(floor2.getPoint_id_map());
+//        print4J(floor3.getPoint_id_map());
 
-//        System.out.println("stair path:" + stair_path);
+        stair_climbing2((ArrayList<Floor>) floors.clone(), "floor1_C8", "floor3_C23", true);
+//        lift_climbing((ArrayList<Floor>) floors.clone(), "floor1_C8", "floor3_C23", true);
+//        escalator_climbing((ArrayList<Floor>) floors.clone(), "floor1_C8", "floor3_C23", true);
+
+        System.out.println("stair path:" + stair_path);
 //        System.out.println("lift path:" + lift_path);
 //        System.out.println("escalator path:" + escalator_path);
 

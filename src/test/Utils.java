@@ -14,41 +14,89 @@ import java.util.regex.Pattern;
  */
 public class Utils {
     //相邻两层之间的对应的两个点
-    public static ArrayList<Point[]> LinkedPointsPair = new ArrayList<>();
+    public static ArrayList<Point[]> LinkedPointsPair_SLE = new ArrayList<>();
+    public static ArrayList<Point[]> LinkedPointsPair_S = new ArrayList<>();
+    public static ArrayList<Point[]> LinkedPointsPair_L = new ArrayList<>();
+    public static ArrayList<Point[]> LinkedPointsPair_E = new ArrayList<>();
     /*所有层点的id_map*/
     public  static HashMap<String, Integer> allFloor_point_id_map = new HashMap<>();
 
-    //构造LinkedPointsPair
+    //构造LinkedPointsPair,可以选择模式。
+    public static void buildLinkedPointsPair_SLE(ArrayList<Floor> floors, String SLE) throws Exception{
+        for (int i = 0; i < floors.size() - 1; i++) {
+            if (SLE.equals("L")) {
+                for (Point point : floors.get(i).getLiftPoints()) {
+                    for (Point next_point : floors.get(i + 1).getLiftPoints()) {
+                        if (isSameOne(point, next_point) && (floors.get(i + 1).getNum_floor() - floors.get(i).getNum_floor() == 1)) {
+                            LinkedPointsPair_L.add(new Point[]{point, next_point});
+                        }
+                    }
+                }
+            }else if (SLE.equals("S")) {
+                for (Point point : floors.get(i).getStairPoints()) {
+                    for (Point next_point : floors.get(i + 1).getStairPoints()) {
+                        if (isSameOne(point, next_point) && (floors.get(i + 1).getNum_floor() - floors.get(i).getNum_floor() == 1)) {
+                            LinkedPointsPair_S.add(new Point[]{point, next_point});
+                        }
+                    }
+                }
+            }else if (SLE.equals("E")) {
+                for (Point point : floors.get(i).getEscalatorPoints()) {
+                    for (Point next_point : floors.get(i + 1).getEscalatorPoints()) {
+                        if (isSameOne(point, next_point) && (floors.get(i + 1).getNum_floor() - floors.get(i).getNum_floor() == 1)) {
+                            LinkedPointsPair_E.add(new Point[]{point, next_point});
+                        }
+                    }
+                }
+            }else {
+                throw new Exception("Please input the correct attribute value,SLE should be one of UPPERCASE 'L','S','E'");
+            }
+        }
+    }
+
     public static void buildLinkedPointsPair(ArrayList<Floor> floors) {
         for (int i = 0; i < floors.size() - 1; i++) {
             for (Point point:floors.get(i).getLiftPoints()){
                 for (Point next_point:floors.get(i+1).getLiftPoints()){
                     if (isSameOne(point, next_point)&&(floors.get(i+1).getNum_floor() - floors.get(i).getNum_floor()==1)){
-                        LinkedPointsPair.add(new Point[]{point, next_point});
+                        LinkedPointsPair_SLE.add(new Point[]{point, next_point});
                     }
                 }
             }
             for (Point point:floors.get(i).getStairPoints()) {
                 for (Point next_point : floors.get(i + 1).getStairPoints()) {
                     if (isSameOne(point, next_point)&&(floors.get(i+1).getNum_floor() - floors.get(i).getNum_floor()==1)) {
-                        LinkedPointsPair.add(new Point[]{point, next_point});
+                        LinkedPointsPair_SLE.add(new Point[]{point, next_point});
                     }
                 }
             }
             for (Point point:floors.get(i).getEscalatorPoints()) {
                 for (Point next_point : floors.get(i + 1).getEscalatorPoints()) {
                     if (isSameOne(point, next_point)&&(floors.get(i+1).getNum_floor() - floors.get(i).getNum_floor()==1)) {
-                        LinkedPointsPair.add(new Point[]{point, next_point});
+                        LinkedPointsPair_SLE.add(new Point[]{point, next_point});
                     }
                 }
             }
         }
     }
 
-    public static WeightedGraph buildBigGraph(ArrayList<Floor> floors){
+    public static void buildallFloor_point_id_map(ArrayList<Floor> floors){
+        //构造大图
+        ArrayList<Point[]> allPointsPair = new ArrayList<>();
+        ArrayList<Point> allPoints = new ArrayList<>();
+        for (Floor floor:floors){
+            allPointsPair.addAll(floor.getAllPointsPair());
+            allPoints.addAll(floor.getAllPoints());
+        }
+
+        for (int i=0;i<allPoints.size();i++){
+            allFloor_point_id_map.put(allPoints.get(i).getLabel(), i);
+        }
+
+    }
+
+    public static WeightedGraph buildBigGraph(ArrayList<Floor> floors,ArrayList<Point[]> LinkedPointsPair) throws Exception {
         Double shortestEdges = getShortestEdges(floors);
-//        buildBigGraph(floors, shortestEdges);
-        buildLinkedPointsPair(floors);
 
         //构造大图
         ArrayList<Point[]> allPointsPair = new ArrayList<>();
@@ -90,8 +138,8 @@ public class Utils {
             // 无向图
             t.addEdge(target, source, shortestEdges/2);
         }
-
-//        t.print();
+        if (!t.isConnected())
+            throw new Exception("The big grapth is not connected, Can't connected through Stair/Lift/Escalator.");
 
         return t;
     }
